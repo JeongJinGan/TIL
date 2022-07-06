@@ -102,7 +102,14 @@ print('hello')
 
 
 
+![pyhonlogo](Markdown.assets/pyhonlogo.png)
 
+
+
+| 절대경로                                                 | 상대경로                                                    |
+| -------------------------------------------------------- | ----------------------------------------------------------- |
+| 어떠한 웹페이지나 파일이 가지고 있는 고유한 경로         | 내가 작성중이 파일의 위치에 따라 주소가 상대적으로 달라진다 |
+| ex) https://wikidocs.net/images/page/5/pahkey_KRRKrp.png | ex) Markdown.assets/pyhonlogo.png                           |
 
 
 
