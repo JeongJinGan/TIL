@@ -96,11 +96,11 @@ print('hello')
 
 
 
-![bono](Markdown.assets/bono.png)
+![bono](../Markdown.assets/bono.png)
 
 
 
-![pyhonlogo](Markdown.assets/pyhonlogo.png)
+![pyhonlogo](../Markdown.assets/pyhonlogo.png)
 
 
 
