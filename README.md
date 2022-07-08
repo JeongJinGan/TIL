@@ -8,5 +8,5 @@
 | 22/07/05 | [Git 정리](./0705/git.md)             | [Git 실습](./0705/git_practice.md)                          |
 | 22/07/06 | 직접 실습 - 자신의 깃허브에 올리기    | [내 GitHub](https://github.com/JeongJinGan/TIL)             |
 | 22/07/07 | [Github & Branch](./0707/0707.md)     | [Branch 실습](./0707/git_branch.md)                         |
-| 22/07/08 | [취업특강](./0708/special lecture.md) | [job_research](https://github.com/JeongJinGan/job_research) |
+| 22/07/08 | [취업특강](./0708/special_lecture.md) | [job_research](https://github.com/JeongJinGan/job_research) |
 
