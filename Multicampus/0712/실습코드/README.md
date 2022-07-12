@@ -168,7 +168,24 @@ for num in numbers:
     if second < num and num < first:
         second = num
 print(second)
+
+# 다른표현
+numbers = [0, 20, 100]
+first = numbers[0]
+second = numbers[0]
+
+# 1. 전체 숫자를 반복
+for num in numbers:
+    # 만약에, num이 최대보다 크다면
+    if num > first:
+        # 최대값이었던 것이 두번째로 큰수
+        second = first
+        first = num
+    # 2. elif second < n < first    
+    elif second < num and num < first:
+        secon = num
+print(second)
 ```
 
-
+<span style="color:red;font-weight:bold">함정 :  # 2. 번 부분을 추가 안한다면 [0, 20, 100, 40] 여기서 2번째로 큰 수는 20이 출력된다.</span>
 
