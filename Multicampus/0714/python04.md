@@ -514,11 +514,3 @@ print(msg.swapcase())
 
   
 
-
-
-## 메서드(methods)
-
-
-
-## 시퀀스
-
