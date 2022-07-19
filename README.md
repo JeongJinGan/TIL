@@ -14,5 +14,5 @@
 | 22/07/14 | [파이썬04](./Multicampus/0714/python04.md)                   | [파이썬 실습](./Multicampus/0714/실습코드)                   |
 | 22/07/15 | [파이썬05](./Multicampus/0715/python05.md)                   | - [파이썬 실습](./Multicampus/0715/실습코드) <br>- [practical_training](./Multicampus/0715/practical_training) |
 | 22/07/18 | [파이썬_예외처리](./Multicampus/0718/예외처리.md)            | -[파이썬 실습](./Multicampus/0718/실습코드) <br>-[practical_training](./Multicampus/0718/practical_training) |
-| 22/07/19 | [파이썬_객체지향언어](./Multicampus/0719/파이썬_객체지향언어.md) | -[practical_training+swea](./Multicampus/0719/practical_training+swea) |
+| 22/07/19 | [파이썬_객체지향언어](./Multicampus/0719/파이썬_객체지향언어.md) | -[파이썬 실습](./Multicampus/0719/실습코드)<br>-[practical_training+swea](./Multicampus/0719/practical_training+swea) |
 
