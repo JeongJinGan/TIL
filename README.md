@@ -16,4 +16,5 @@
 | 22/07/18 | [파이썬_예외처리](./Multicampus/0718/예외처리.md)            | -[파이썬 실습](./Multicampus/0718/실습코드) <br>-[practical_training](./Multicampus/0718/practical_training) |
 | 22/07/19 | [파이썬_객체지향언어](./Multicampus/0719/파이썬_객체지향언어.md) | -[파이썬 실습](./Multicampus/0719/실습코드)<br>-[practical_training+swea](./Multicampus/0719/practical_training+swea) |
 | 22/07/20 | [파이썬_클래스](./Multicampus/0720/파이썬_클래스.md)         | -[파이썬 실습](./Multicampus/0720/실습코드) <br>-[practical_training(swea)](./Multicampus/0720/practical_training) |
+| 22/07/21 | [파이썬_응용/심화](./Multicampus/0721/파이썬_응용심화.md)    | -[파이썬 실습](./Multicampus/0721/실습코드)<br>-[practical_training(swea)](./Multicampus/0721/practical_training) |
 
