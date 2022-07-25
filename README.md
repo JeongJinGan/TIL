@@ -18,4 +18,5 @@
 | 22/07/20 | [파이썬_클래스](./Multicampus/0720/파이썬_클래스.md)         | -[파이썬 실습](./Multicampus/0720/실습코드) <br>-[practical_training(swea)](./Multicampus/0720/practical_training) |
 | 22/07/21 | [파이썬_응용/심화](./Multicampus/0721/파이썬_응용심화.md)    | -[파이썬 실습](./Multicampus/0721/실습코드)<br>-[practical_training(swea)](./Multicampus/0721/practical_training) |
 | 22/07/22 | [파이썬_프로젝트02](./Multicampus/0722/파이썬_프로젝트02.md) | -[파이썬 실습](./Multicampus/0722/실습코드)<br/>-[프로젝트02](https://github.com/JeongJinGan/01-PJT-02/tree/main/3%ED%9A%8C%EC%B0%A8/%EA%B0%84%EC%A0%95%EC%A7%84) |
+| 22/07/25 | [알고리즘이란](./Multicampus/0725/알고리즘.md)               | [알고리즘 실습](./Multicampus/0725/실습코드)                 |
 
