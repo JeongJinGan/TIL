@@ -18,9 +18,10 @@
 | 22/07/20 | [파이썬_클래스](./Multicampus/0720/파이썬_클래스.md)         | -[파이썬 실습](./Multicampus/0720/실습코드) <br>-[practical_training(swea)](./Multicampus/0720/practical_training) |
 | 22/07/21 | [파이썬_응용/심화](./Multicampus/0721/파이썬_응용심화.md)    | -[파이썬 실습](./Multicampus/0721/실습코드)<br>-[practical_training(swea)](./Multicampus/0721/practical_training) |
 | 22/07/22 | [파이썬_프로젝트02](./Multicampus/0722/파이썬_프로젝트02.md) | -[파이썬 실습](./Multicampus/0722/실습코드)<br/>-[프로젝트02](https://github.com/JeongJinGan/01-PJT-02/tree/main/3%ED%9A%8C%EC%B0%A8/%EA%B0%84%EC%A0%95%EC%A7%84) |
-| 22/07/25 | [알고리즘01](./Multicampus/0725/알고리즘.md)                 | [알고리즘 실습](./Multicampus/0725/실습코드)                 |
-| 22/07/26 | [알고리즘02](./Multicampus/0726/알고리즘02.md)               | [알고리즘 실습](./Multicampus/0726/실습코드)                 |
-| 22/07/27 | [알고리즘03](./Multicampus/0727/알고리즘03.md)               | [알고리즘 실습](./Multicampus/0727/실습코드)                 |
-| 22/07/28 | [알고리즘04](./Multicampus/0728/알고리즘04.md)               | [알고리즘 실습](./Multicampus/0728/실습코드)                 |
+| 22/07/25 | [자료구조01](./Multicampus/0725/자료구조01.md)               | [알고리즘 실습](./Multicampus/0725/실습코드)                 |
+| 22/07/26 | [자료구조02](./Multicampus/0726/자료구조02.md)               | [알고리즘 실습](./Multicampus/0726/실습코드)                 |
+| 22/07/27 | [자료구조03](./Multicampus/0727/자료구조03.md)               | [알고리즘 실습](./Multicampus/0727/실습코드)                 |
+| 22/07/28 | [자료구조04](./Multicampus/0728/자료구조04.md)               | [알고리즘 실습](./Multicampus/0728/실습코드)                 |
 | 22/07/29 | [알고리즘특강](./Multicampus/0729/알고리즘특강.md)           | [알고리즘 실습(코딩 테스트)](./Multicampus/0729/실습코드(코딩테스트)) |
+| 22/08/01 | [자료구조05](./Multicampus/0728/자료구조05.md)               | [알고리즘 실습(스택, 큐)](./Multicampus/0801/실습코드)       |
 
