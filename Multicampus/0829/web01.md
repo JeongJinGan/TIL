@@ -5,7 +5,7 @@
 ```html
 HTML			▶ 구조
 CSS			▶ 표현
-Javascript			▶ 동작
+Javascript		▶ 동작
 ```
 
 
