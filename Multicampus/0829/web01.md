@@ -12,7 +12,7 @@ Javascript		▶ 동작
 
 ## 예시 살펴보기
 
-[HTML + CSS + JS]([HTML CSS JavaScript - Free Online Editor and Tools (html-css-js.com)](https://html-css-js.com/))
+[HTML + CSS + JS](https://html-css-js.com/)
 
 
 
