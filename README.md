@@ -42,4 +42,5 @@
 | 22/08/24 | [데이터베이스07](./Multicampus/0824/데이터베이스07.md)       | [데이터베이스07실습(ORM)](./Multicampus/0824/DB_07.md)       |
 | 22/08/25 | [데이터베이스08](./Multicampus/0825/데이터베이스08.md)       | [데이터베이스08실습](./Multicampus/0825/DB_08.md)            |
 | 22/08/26 | [데이터베이스정리](./Multicampus/0826/데이터베이스정리.md)   | [SQL코딩연습](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit) |
+| 22/08/29 | [web01](./Multicampus/0829/web01.md)<br>[이미지&멀티미디어_태그](./Multicampus/0829/이미지&멀티미디어_태그.md) | [web실습](./Multicampus/0829/실습코드)                       |
 
