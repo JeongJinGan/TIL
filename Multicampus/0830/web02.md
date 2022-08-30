@@ -19,6 +19,34 @@
 
 💡 **em, rem차이 기억하기**💡
 
+```html
+<style>
+   	.font-big {
+    	font-size: 36px;
+        }
+    .em {
+        font-size: 2em;
+        }
+    .rem {
+        font-size: 2rem;
+        }
+</style>
+
+<body>
+    <h2 class="em">2em</h2>  
+    <ul class="em">
+        <li class="em">2em</li>
+    </ul>
+
+  <h2 class="rem">2rem</h2>
+  <ul class="rem">
+    <li class="rem">2rem</li>
+  </ul>
+</body>
+```
+
+
+
 
 
 ![image-20220830171812595](../Markdown.assets/image-20220830171812595.png)
