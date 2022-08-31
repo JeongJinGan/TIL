@@ -75,7 +75,7 @@ div {
 </body>
 ```
 
-![absolutevsrelative](0831.assets/absolutevsrelative.PNG)
+![absolutevsrelative](../Markdown.assets/absolutevsrelative.PNG)
 
 
 
@@ -180,7 +180,7 @@ div {
 - Main axis 기준 방향 설정
 - 역방향의 경우 HTML 태그 선언 순서와 시각적으로 다르니 유의 (웹 접근성에 영향)
 
-![flex-direction](0831.assets/flex-direction.PNG)
+![flex-direction](../Markdown.assets/flex-direction.PNG)
 
 
 
@@ -189,7 +189,7 @@ div {
 - 아이템이 컨테이너를 벗어나는 경우 해당 영역 내에 배치되도록 설정
 - 즉, 기본적으로 컨테이너 영역을 벗어나지 않도록 함
 
-![flex-wrap](0831.assets/flex-wrap.PNG)
+![flex-wrap](../Markdown.assets/flex-wrap.PNG)
 
 
 
@@ -210,7 +210,7 @@ div {
 
 - Main axis를 기준으로 공간 배분
 
-![justify-content](0831.assets/justify-content-16619323152206.PNG)
+![justify-content](../Markdown.assets/justify-content-16619323152206.PNG)
 
 
 
@@ -218,7 +218,7 @@ div {
 
 - Cross axis를 기준으로 공간 배분 (아이템이 한 줄로 배치되는 경우 확인할 수 없음)
 
-![align-content](0831.assets/align-content.PNG)
+![align-content](../Markdown.assets/align-content.PNG)
 
 
 
@@ -232,7 +232,7 @@ div {
   - space-around : 아이템을 둘러싼 영역을 균일하게 분배 (가질 수 있는 영역을 반으로 나눠서 양쪽에)
   - space-evenly : 전체 영역에서 아이템 간 간격을 균일하게 분배
 
-![aroundvsevenly](0831.assets/aroundvsevenly.PNG)
+![aroundvsevenly](../Markdown.assets/aroundvsevenly.PNG)
 
 
 
@@ -240,7 +240,7 @@ div {
 
 - 모든 아이템을 Cross axis를 기준으로 정렬
 
-![align-items](0831.assets/align-items.PNG)
+![align-items](../Markdown.assets/align-items.PNG)
 
 
 
@@ -249,7 +249,7 @@ div {
 - 개별 아이템을 Cross axis 기준으로 정렬
   - **<span style="color:red">주의! 해당 속성은 컨테이너에 적용하는 것이 아니라 개별 아이템에 적용</span>**
 
-![align-self](0831.assets/align-self.PNG)
+![align-self](../Markdown.assets/align-self.PNG)
 
 
 
@@ -269,52 +269,5 @@ div {
 # Flex 연습해보기
 
 [flex 실습(froggy)](https://flexboxfroggy.com/#ko)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
