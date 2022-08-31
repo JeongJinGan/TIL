@@ -43,5 +43,6 @@
 | 22/08/25  | [데이터베이스08](./Multicampus/0825/데이터베이스08.md)       | [데이터베이스08실습](./Multicampus/0825/DB_08.md)            |
 | 22/08/26  | [데이터베이스정리](./Multicampus/0826/데이터베이스정리.md)   | [SQL코딩연습](https://school.programmers.co.kr/learn/challenges?tab=sql_practice_kit) |
 | 22/08/29  | [web01](./Multicampus/0829/web01.md)<br>[이미지&멀티미디어_태그](./Multicampus/0829/이미지&멀티미디어_태그.md) | [web실습](./Multicampus/0829/실습코드)                       |
-| 22//08/30 | [web01](./Multicampus/0830/web02.md)                         | [오전실습](./Multicampus/0830/실습코드)<br>[오후실습](./Multicampus/0830/실습) |
+| 22//08/30 | [web02](./Multicampus/0830/web02.md)                         | [오전실습](./Multicampus/0830/실습코드)<br>[오후실습](./Multicampus/0830/실습) |
+| 22/08/31  | [web03](./Multicampus/0831/web03.md)                         | [오전실습](./Multicampus/0831/실습코드)<br/>[오후실습](./Multicampus/0831/실습.md) |
 
