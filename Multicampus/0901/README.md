@@ -19,3 +19,7 @@ index.html 디테딜한 px값이나, 위치등은 교육생들의 도움을 받�
 product.html은 거의 하지 못하였다.
 
 아직 구조 파악을 이해하지 못하고 있다.
+
+
+
+다른 사람들꺼 보면서 해보았다 (pra_products.html)
