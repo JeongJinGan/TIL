@@ -48,4 +48,5 @@
 | 22/09/01  | [web04](./Multicampus/0901/web04.md)                         | [오전실습](./Multicampus/0901/실습코드)<br/>[오후실습](./Multicampus/0901/오후실습) |
 | 22/09/02  |                                                              | [팀프로젝트](./Multicampus/0902/web05)                       |
 | 22/09/05  | [web05](./Multicampus/0905/web05.md)                         | [오후실습(부트스트랩)](./Multicampus/0905/실습)              |
+| 22/09/06  | [web06](./Multicampus/0906/web06.md)                         | [오후실습(부트스트랩활용)](./Multicampus/0906/오후실습)      |
 
