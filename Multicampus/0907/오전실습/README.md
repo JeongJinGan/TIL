@@ -2,7 +2,7 @@
 
 반드시 기억해야 할 2가지 ! 
          	1. **12개의 column** 
-                  	2. **6개의 grid breakpoints**
+         	1. **6개의 grid breakpoints**
 
 
 
