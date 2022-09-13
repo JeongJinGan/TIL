@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+    <title>boxoffice</title>
+    <style>
+        .carousel-item{
+            width: 100%;
+            height: 600px;
+        }
+        .list-group-item {
+            text-align: left;
+        }
+        .posting-title {
+            float:left;
+            font-size: 17px;
+        }
+
+        .movie-title, .register-time {
+            float: left;
+        }
+        .writer {
+            float: left;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid justify-content-start ">
+         <div>
+            <img src="./images/logo.png" height="85px">
+         </div>
+          <ul class="d-flex nav justify-content-end">
+            <li class="nav-item px-3">
+                <a class="tab" aria-current="page" href="home.html">Home</a> 
+            </li>
+            <li class="nav-item px-3">
+                <a class="tab" href="community.html">Community</a>
+            </li>   
+            <li class="nav-item px-3">
+                <a class="tab" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                    Login
+                </a>
+                <div class="modal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" tabindex="-1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Email address
+                            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="">
+                            <p class="fw-light">We'll never share your email with anyone else</p>
+                            Password
+                            <input type="password" class="form-control" id="password1">
+                            <br>
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                Check me out
+                            </label>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Submit</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      
+    <div class="container px-4 px-lg-5 mt-5">
+        <div class="row my-3 mb-4">
+            <div class="my-3 mb-4">
+                <h2 class="fw-bolder mb-4 text-center">Community</h2>
+            </div>
+            <aside class="card col-12 col-lg-2">
+                <ul class="list-group list-group-flush">
+                    <a class="list-group-item list-group-item-action text-primary" href="#list-item-1">Boxoffice</a>
+                    <a class="list-group-item list-group-item-action text-primary" href="#list-item-2">Movies</a>
+                    <a class="list-group-item list-group-item-action text-primary" href="#list-item-3">Genres</a>
+                    <a class="list-group-item list-group-item-action text-primary" href="#list-item-4">Actors</a>
+                </ul>
+            </aside>
+    
+            <!-- Board : 게시판 -->
+            <!-- 1) table -->
+            <section class="col-12 col-lg-10">
+                <div class="d-none d-lg-block">
+                    <table class="table table-striped"> 
+                        <thead>
+                            <tr class="table-dark">
+                                <th scope="col">영화제목</th>
+                                <th scope="col">글 제목</th>
+                                <th scope="col">작성자</th>
+                                <th scope="col">작성시간</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">쇼생크 탈출</th>
+                                <td>개꿀잼</td>
+                                <td>Otto</td>
+                                <td>1 minute ago</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">죽은 시인의 사회</th>
+                                <td>개무섭</td>
+                                <td>Thornton</td>
+                                <td>2 minute ago</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">다크 나이트 라이즈</th>
+                                <td>굿</td>
+                                <td>user</td>
+                                <td>5 minute ago</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+    
+            <!-- 2) list -->
+            <article class="col-12">
+                <div class="d-block d-lg-none">
+                    <hr class="m-3">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <div class="card my-3" style="width: 100%;">
+                                <div class="card-body">
+                                  <h5 class="card-title">글 제목 : 개꿀잼</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">영화제목 : 쇼생크 탈출</li>
+                                  <li class="list-group-item">작성자 : Otto</li>
+                                  <li class="list-group-item">작성시간 : 1 minute ago</li>
+                                </ul>
+                            </div>
+                            <div class="card my-3" style="width: 100%;">
+                                <div class="card-body">
+                                  <h5 class="card-title">글 제목 : 개무섭</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">영화제목 : 죽은 시인의 사회</li>
+                                  <li class="list-group-item">작성자 : Thornton</li>
+                                  <li class="list-group-item">작성시간 : 2 minute ago</li>
+                                </ul>
+                            </div>
+                            <div class="card my-3" style="width: 100%;">
+                                <div class="card-body">
+                                  <h5 class="card-title">글 제목 : 개꿀잼</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                  <li class="list-group-item">영화제목 : 다크 나이트 라이즈</li>
+                                  <li class="list-group-item">작성자 : user</li>
+                                  <li class="list-group-item">작성시간 : 5 minute ago</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <hr class="m-3">
+                </div>
+            </article>
+    
+        </div> 
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+              </li>
+            </ul>
+        </nav>
+        <!-- row -->
+    <!-- footer -->
+    <footer class="fixed-bottom d-flex flex-column justify-content-center align-items-center py-3 bg-secondary">
+        <sapn>Web-bootstrap PJT, by _김상훈 _간정진</strong></sapn>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
