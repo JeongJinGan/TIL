@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" href="./favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <title>her</title>
+    <style>
+
+        .bg_img{
+            background-image: url('https://img1.daumcdn.net/thumb/C408x596/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F767b17f16c8e4aa5a5a9deae11372f431558067772516');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 350px;
+            height: 500px;
+            margin-right: 2rem;
+            border-radius: 2rem;
+        }
+        .detail_cont{
+            padding-bottom: 48px;
+        }
+        .break_point{
+            column-count:5;
+            column-rule:2px dotted #000;
+            text-align: justify;
+        }
+        .brake_point p{
+            break-before: column;
+        }
+        html,body{
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+        }
+        .wrapper{
+            height: auto;
+            min-height: 100%;
+        }
+        footer{
+            height: 60px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        .list_crew{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <body>
+       <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+              <!-- logo -->
+              <a class="navbar-brand" href="home.html"><img class="home-logo-img" src="images/logo.png" alt="home-logo-img" height="65px"></a>
+              <!-- toggle btn -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- nav list -->
+              <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="community.html">Community</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#loginModal" data-bs-toggle="modal">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+          <!-- Modal (login form) -->
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Heaer -->
+                <div class="modal-header">
+                  <h5 class="modal-title fw-bold" id="loginModalLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body (FORM) -->
+                <div class="modal-body">
+                  <form class="row g-3 d-flex flex-column">
+                    <div>
+                      <label for="inputUserName" class="form-label">UserName</label>
+                      <input type="email" class="form-control" id="inputUserName" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-2">
+                      <label for="inputPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password">
+                    </div>
+                    <div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+        
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        
+
+
+    <div class="container my-4">
+      <div class="d-flex">
+        <div class="bg_img"></div>
+          <div class="d-flex flex-column">
+            <h2 class="fw-bold">그녀</h2>
+            <div class="head_origin fw-bold">
+                <span class="txt_name mx-1">Her,2013</span></div>
+              <div class="d-flex my-4 pb-4">     
+                <div class="detail_cont">
+                    <div class="inner_cont my-0 me-3">
+                                <dl class="list_cont my-0">
+                                        <dt>개봉</dt>
+                                    <dd>2014.05.22</dd>
+                                </dl>
+                                <dl class="list_cont my-0">
+                                    <dt>재개봉</dt>
+                                    <dd>2019.05.29</dd>
+                                </dl>
+                            <dl class="list_cont my-0">
+                                <dt>장르</dt>
+                                <dd>로맨스/멜로</dd>
+                            </dl>
+                            <dl class="list_cont my-0">
+                                <dt>국가</dt>
+                                <dd>미국</dd>
+                            </dl>
+                                <dl class="list_cont my-0">
+                                <dt>등급</dt>
+                                <dd>
+                                    15세이상관람가
+                                </dd>
+                                </dl>
+                            <dl class="list_cont my-0">
+                            <dt>러닝타임</dt>
+                            <dd>
+                                125분 , 126분(재개봉)
+                            </dd>
+                            </dl>
+                    </div>
+                    </div>
+                    <div class="inner_cont">
+                            <dl class="list_cont">
+                            <dt>평점</dt>
+                            <dd><span class="small text-warning mb-1"><span class="bi-star-fill"></span></span>8.2</dd>
+                            </dl>
+                            <dl class="list_cont">
+                                <dt>누적관객</dt>
+                                <dd>371,151명</dd>
+                            </dl>
+
+
+            </div>
+        </div>
+       </div>
+       </div> 
+        <div class="container my-2">
+            <h4 class="fw-bold">줄거리</h4>
+        <p><span class="fw-bold">사랑과 관계에 서툰 모두를 위한 감성 로맨스<br>우리에게 사랑하는 법을 알려준, 그녀를 다시 만난다</span></p>
+        <p>다른 사람의 편지를 써주는 대필 작가로 일하고 있는 ‘테오도르’는 타인의 마음을 전해주는 일을 하고 있지만 정작 자신은 아내와 별거 중인 채 외롭고 공허한 삶을 살아가고 있다.
+
+        <p>어느 날, 스스로 생각하고 느끼는 인공지능 운영체제 ‘사만다’를 만나게 되고, 자신의 말에 귀를 기울이며 이해해주는 ‘사만다’로 인해 조금씩 상처를 회복하고 행복을 되찾기 시작한 
+            ‘테오도르’는 어느새 점점 그녀에게 사랑의 감정을 느끼게 되는데....</p>
+        </div>
+
+        <div class="player_mediavod" style="padding-top: 562px; position: relative;">
+            <div class="player_container" id="playerContainer" style="background-color:#f8f8fc; height: 562px;width:100%;position:absolute;top:0;left:0"><iframe allow="autoplay; fullscreen; encrypted-media" allowfullscreen="" src="https://kakaotv.daum.net/embed/player/cliplink/400230055?service=daum_movie&amp;section=movie" style="width: 100%; height: 100%; border: 0px;"></iframe></div>
+            <strong class="tit_player">[재개봉] 리뷰 예고편</strong>
+        </div>
+
+
+        <div class="container">
+            <div clss="d-flex">
+            <h4 class="screen_out fw-bold my-4">출연</h4>
+            <div class="detail_crewinfo">
+                <h5 class="tit_section">감독</h5>
+                <ul class="list_crew">
+                        <li>
+                            <div class="item_crew d-flex">
+                                <a href="/person/main?personId=291620" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F1240D410AE0B85413F" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                       스파이크 존즈
+                                    </strong>
+                                        <p class="subtit_item">Spike Jonze</p>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+            <div class="detail_crewinfo">
+                <h5 class="tit_section">주연</h5>
+                <ul class="list_crew d-flex flex-wrap px-3">
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=1437" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F154A8F10AE57230E9C" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        호아킨 피닉스
+                                    </strong>
+                                        <p class="subtit_item">Joaquin Phoenix</p>
+ 
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=100584" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F03314f3ce837d275078e5f573b18e38889ceaab2" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        스칼렛 요한슨
+                                    </strong>
+                                        <p class="subtit_item">Scarlett Johansson</p>
+
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+            <div class="detail_crewinfo">
+                <h5 class="tit_section">출연</h5>
+                <ul class="list_crew d-flex flex-wrap px-3">
+                        <li>
+                            <div class="item_crew d-flex mx-3 mb-4">
+                                <a href="/person/main?personId=9625" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Ff8142afe98279615e027240ce1e78773b700713a" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                       에이미 아담스
+                                    </strong>
+                                        <p class="subtit_item">Amy Lou Adams</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=295276" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F494353a9a676ad5a9e94852d82a80e01238310d7" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        루니 마라
+                                    </strong>
+                                        <p class="subtit_item">Rooney Mara</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=311259" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F112EFB10AE226E3A54" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                       올리비아 와일드
+                                    </strong>
+                                        <p class="subtit_item">Olivia Wilde</p>
+                                        
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=490999" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F4a10874f56791f822331095f0306a539869297de" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        크리스 프랫
+                                    </strong>
+                                        <p class="subtit_item">Chris Pratt</p>
+
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+
+       
+        </div>
+ 
+       <div class="container">
+        <div class="d-flex flex-column">
+          <h3 class="fw-bold">평점</h3>
+          <hr/>
+          <div class="d-flex small text-warning">
+            <div class="bi-star-fill"></div>
+            <div class="bi-star-fill"></div>
+            <div class="bi-star-fill"></div>
+            <div class="bi-star"></div>
+            <div class="bi-star"></div>
+          </div>  
+          <p>괜찮았어요</p>
+          <div class="break_point">
+          <p>영화마니아</p>
+          <p>2019.06.05</p>
+          </div>
+        </div>
+    
+       <hr/>
+       <div class="d-flex small text-warning">
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+         <div class="bi-star"></div>
+       </div>  
+       <p>감각적인 음악과 영상 보이스가 좋았어요!</p>
+       <div class="break_point">
+       <p>오늘도 영화봄</p>
+       <p>2019.05.30</p>
+       </div>
+     </div>
+    </div> 
+</div>
+</div>
+
+
+
+
+</div> 
+<footer>Web-Bootstrap PJT by 간정진, 김상훈</footer> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

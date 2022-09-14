@@ -51,5 +51,6 @@
 | 22/09/06  | [web06](./Multicampus/0906/web06.md)                         | [오후실습(부트스트랩활용)](./Multicampus/0906/오후실습)      |
 | 22/09/07  | [web07](./Multicampus/0907/web07.md)                         | [오전실습](./Multicampus/0907/오전실습)<br/>[오후실습](./Multicampus/0907/오후실습) |
 | 22/09/08  |                                                              | [오전&오후 실습](./Multicampus/0908/오전_오후_실습)          |
-| 22/09/13  |                                                              | [오전&오후 실습](./Multicampus/0913)                         |
+| 22/09/13  |                                                              | [팀프로젝트(with_김상훈)](./Multicampus/0913)                |
+| 22/09/14  |                                                              | [팀프로젝트(with_김상훈)](./Multicampus/0914/Team_project_with_ksy133900) |
 

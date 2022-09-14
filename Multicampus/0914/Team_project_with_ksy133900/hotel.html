@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="favicon" href="./favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+    <title>Grand Budapest Hotel</title>
+    <style>
+
+        .bg_img{
+            background-image: url('https://img1.daumcdn.net/thumb/C408x596/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Fc99cda1cf8b94490b4974d7b7f73568d1538020007807');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 350px;
+            height: 500px;
+            margin-right: 2rem;
+            border-radius: 2rem;
+        }
+        .detail_cont{
+            padding-bottom: 48px;
+        }
+        .break_point{
+            column-count:5;
+            column-rule:2px dotted #000;
+            text-align: justify;
+        }
+        .brake_point p{
+            break-before: column;
+        }
+        html,body{
+            margin: 0; padding: 0;
+            width: 100%; height: 100%;
+        }
+        .wrapper{
+            height: auto;
+            min-height: 100%;
+        }
+        footer{
+            height: 60px;
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+        .list_crew{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+       <div class="wrapper">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+              <!-- logo -->
+              <a class="navbar-brand" href="home.html"><img class="home-logo-img" src="images/logo.png" alt="home-logo-img" height="65px"></a>
+              <!-- toggle btn -->
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!-- nav list -->
+              <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="home.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="community.html">Community</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#loginModal" data-bs-toggle="modal">Login</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        
+          <!-- Modal (login form) -->
+          <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Heaer -->
+                <div class="modal-header">
+                  <h5 class="modal-title fw-bold" id="loginModalLabel">Login</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!-- Modal Body (FORM) -->
+                <div class="modal-body">
+                  <form class="row g-3 d-flex flex-column">
+                    <div>
+                      <label for="inputUserName" class="form-label">UserName</label>
+                      <input type="email" class="form-control" id="inputUserName" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-2">
+                      <label for="inputPassword" class="form-label">Password</label>
+                      <input type="password" class="form-control" id="inputPassword" placeholder="Enter your password">
+                    </div>
+                    <div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                        <label class="form-check-label" for="gridCheck">
+                          Check me out
+                        </label>
+                      </div>
+                    </div>
+        
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        
+
+
+    <div class="container my-4">
+      <div class="d-flex">
+        <div class="bg_img"></div>
+          <div class="d-flex flex-column">
+            <h2 class="fw-bold">그랜드 부다페스트 호텔</h2>
+            <div class="head_origin fw-bold">
+                <span class="txt_name mx-1">The Grand Budapest Hotel, 2014</span></div>
+              <div class="d-flex my-4 pb-4">     
+                <div class="detail_cont">
+                    <div class="inner_cont my-0 me-3">
+                                <dl class="list_cont my-0">
+                                        <dt>개봉</dt>
+                                    <dd>2014.03.20</dd>
+                                </dl>
+                                <dl class="list_cont my-0">
+                                    <dt>재개봉</dt>
+                                    <dd>2018.10.11</dd>
+                                </dl>
+                            <dl class="list_cont my-0">
+                                <dt>장르</dt>
+                                <dd>어드벤처/코미디/판타지</dd>
+                            </dl>
+                            <dl class="list_cont my-0">
+                                <dt>국가</dt>
+                                <dd>미국, 독일</dd>
+                            </dl>
+                                <dl class="list_cont my-0">
+                                <dt>등급</dt>
+                                <dd>
+                                    15세이상관람가
+                                </dd>
+                                </dl>
+                            <dl class="list_cont my-0">
+                            <dt>러닝타임</dt>
+                            <dd>
+                                100분
+                            </dd>
+                            </dl>
+                    </div>
+                    </div>
+                    <div class="inner_cont">
+                            <dl class="list_cont">
+                            <dt>평점</dt>
+                            <dd><span class="small text-warning mb-1"><span class="bi-star-fill"></span></span>8.1</dd>
+                            </dl>
+                            <dl class="list_cont">
+                                <dt>누적관객</dt>
+                                <dd>832,687</dd>
+                            </dl>
+
+
+            </div>
+        </div>
+       </div>
+       </div> 
+        <div class="container my-2">
+            <h4 class="fw-bold">줄거리</h4>
+            <p><span class="fw-bold">세계 최고 부호 마담 D.의 피살사건!<br>
+                전 세계를 매료시킨 황홀한 이야기가 다시 시작된다!</span></p>
+            <p>1927년 세계대전이 한창이던 어느 날, 세계 최고의 부호 마담 D.가 의문의 살인을 당한다. 유력한 용의자로 지목된 사람은 바로 전설적인 호텔 지배인이자 그녀의 연인 ‘구스타브’!<br>
+                구스타브는 누명을 벗기 위해 충실한 로비보이 ‘제로’에게 도움을 청하고, 
+                그 사이 구스타브에게 남겨진 마담 D.의 유산을 노리던 그녀의 아들 ‘드미트리’는 무자비한 킬러를 고용해 [그랜드 부다페스트 호텔]을 찾게 되는데…
+                </p>
+                <p><span class="fw-bold">
+                    문을 여는 순간 완벽히 빠져드는 기상천외 판타지아트!<br>
+                    단 100분 간의 환상의 세계로 당신을 초대합니다!</p>
+        </div>
+        <div class="player_mediavod" style="padding-top: 562px; position: relative;">
+            <div class="player_container" id="playerContainer" style="background-color:#f8f8fc; height: 562px;width:100%;position:absolute;top:0;left:0"><iframe allow="autoplay; fullscreen; encrypted-media" allowfullscreen="" src="https://kakaotv.daum.net/embed/player/cliplink/391953534?service=daum_movie&amp;section=movie" style="width: 100%; height: 100%; border: 0px;"></iframe></div>
+            <strong class="tit_player">[재개봉] 팔레트 뮤직비디오</strong>
+        </div>
+        <div class="container">
+            <div clss="d-flex">
+            <h4 class="screen_out fw-bold my-4">출연</h4>
+            <div class="detail_crewinfo">
+                <h5 class="tit_section">감독</h5>
+                <ul class="list_crew">
+                        <li>
+                            <div class="item_crew d-flex">
+                                <a href="/person/main?personId=291620" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F816a6c9510254dbb3db8d293d59556ce8ba4e8bf" class="img_thumb" alt="마이클 그레이시">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                       웨스 앤더슨
+                                    </strong>
+                                        <p class="subtit_item">Wes Anderson</p>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+            </div>
+            <div class="detail_crewinfo">
+                <h5 class="tit_section">주연</h5>
+                <ul class="list_crew d-flex flex-wrap px-3">
+                        <li>
+                            <div class="item_crew d-flex mx-3 mb-4">
+                                <a href="/person/main?personId=9625" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F98944d51a9d0d487d6c46a60d691c66653e7319b" class="img_thumb" alt="">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                      랄프 파인즈
+                                    </strong>
+                                        <p class="subtit_item">Ralph Fiennes</p>
+                                        <p class="txt_info">구스타브 역</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=295276" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F1167FB10B16134935B" class="img_thumb" alt="젠데이아 콜먼">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        틸다 스윈튼
+                                    </strong>
+                                        <p class="subtit_item">Tilda Swinton</p>
+                                        <p class="txt_info">마담 D.역</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=311259" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fcfile%2F25650348530F964816" class="img_thumb" alt="레베카 퍼거슨">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                       토니 레볼로리
+                                    </strong>
+                                        <p class="subtit_item">Tony Revolori</p>
+                                        <p class="txt_info">제로 역</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=490999" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Fad8696da979a0ec67e31a65c801a9889cc7af38c" class="img_thumb" alt="오스틴 존슨">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        애드리언 브로디
+                                    </strong>
+                                        <p class="subtit_item">Adrien Brody</p>
+                                        <p class="txt_info">드미트리 역</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="item_crew d-flex mx-3">
+                                <a href="/person/main?personId=491000" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                    <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=http%3A%2F%2Ft1.daumcdn.net%2Fmovie%2F83e4055839e9c50301797f37244875a31e791710" class="img_thumb" alt="캐머런 실리">
+                                </a>
+                                <div class="thumb_cont mx-3">
+                                    <strong class="tit_item">
+                                        윌렘 데포
+                                    </strong>
+                                        <p class="subtit_item">Willem Dafoe</p>
+                                        <p class="txt_info">조플링 역/p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <li>
+                                <div class="item_crew d-flex mx-3">
+                                    <a href="/person/main?personId=491000" class="thumb_item" data-tiara-layer="detail_crew" data-tiara-copy="출연제작_감독/주연/출연">
+                                        <img src="https://img1.daumcdn.net/thumb/C116x168/?fname=https%3A%2F%2Ft1.daumcdn.net%2Fmovie%2Fd2ca3790230f1bab4c0ad3131dc199e8b141e487" class="img_thumb" alt="캐머런 실리">
+                                    </a>
+                                    <div class="thumb_cont mx-3">
+                                        <strong class="tit_item">
+                                            시얼샤 로넌
+                                        </strong>
+                                            <p class="subtit_item">Saoirse Ronan</p>
+                                            <p class="txt_info">아가사 역</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                </ul>
+            </div>
+
+            </div>
+        </div>
+    </div> 
+       <div class="container">
+        <div class="d-flex flex-column">
+          <h3 class="fw-bold">평점</h3>
+          <hr/>
+          <div class="d-flex small text-warning">
+            <div class="bi-star-fill"></div>
+            <div class="bi-star-fill"></div>
+            <div class="bi-star-fill"></div>
+            <div class="bi-star-fill"></div>
+            <div class="bi-star-fill"></div>
+          </div>  
+          <p>100분? 10분 보고 나온 것 같은데..? 개꿀잼</p>
+          <div class="break_point">
+          <p>인생이판타지</p>
+          <p>2018.11.14</p>
+          </div>
+        </div>
+    
+       <hr/>
+       <div class="d-flex small text-warning">
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+         <div class="bi-star-fill"></div>
+       </div>  
+       <p>영화랑 취향이 안맞으면 보다가 자주 조는데 이건 끝까지 재미있게 봤어요 </p>
+       <div class="break_point">
+       <p>프로수면러</p>
+       <p>2018.11.04</p>
+       </div>
+     </div>
+    </div> 
+</div>
+</div>
+
+
+
+
+</div> 
+
+<footer>Web-Bootstrap PJT by 김상훈, 간정진</footer> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

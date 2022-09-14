@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>home</title>
+<link rel="favicon" href="./favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <style>
+      h1 {
+        padding-top: 40px; padding-bottom:40px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      .tab{
+        text-decoration: none;
+        color: white
+      }
+      .carousel-item{
+        width: 100%;
+        height: 500px;
+      }
+      html,body{
+        margin: 0; padding: 0;
+        width: 100%; height: 100%;
+    }
+    body{
+      background-color: black;
+    }
+    .wrapper{
+        height: auto;
+        min-height: 100%;
+    }
+    footer{
+        height: 60px;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+    </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+      <!-- logo -->
+      <a class="navbar-brand" href="home.html"><img class="home-logo-img" src="images/logo.png" alt="home-logo-img" height="75px"></a>
+      <!-- toggle btn -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- nav list -->
+      <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="community.html">Community</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#loginModal" data-bs-toggle="modal">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal (login form) -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Heaer -->
+        <div class="modal-header">
+          <h5 class="modal-title fw-bold" id="loginModalLabel">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <!-- Modal Body (FORM) -->
+        <div class="modal-body">
+          <form class="row g-3 d-flex flex-column">
+            <div>
+              <label for="inputUserName" class="form-label">UserName</label>
+              <input type="email" class="form-control" id="inputUserName" placeholder="">
+            </div>
+            <div class="mb-2">
+              <label for="inputPassword" class="form-label">Password</label>
+              <input type="password" class="form-control" id="inputPassword" placeholder="">
+            </div>
+            <div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label" for="gridCheck">
+                  Check me out
+                </label>
+              </div>
+            </div>
+
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <header class="header">
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></li>
+              <li data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner">
+              <div class="carousel-item active">
+                  <img src="images/movie4.jpg" class="d-block w-100" alt="header-movie-posters-1">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/movie3.jpg" class="d-block w-100" alt="header-movie-posters-2">
+              </div>
+              <div class="carousel-item">
+                  <img src="images/movie6.jpg" class="d-block w-100" alt="header-movie-posters-3">
+              </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+          </a>
+      </div>
+  </header>
+  
+  <h1 class="text-center text-white">Boxoffice</h1>
+
+  <div class="container">
+    <section class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+        <div class="col">
+            <article class="card"><a href="shawshank.html"><img src="images/movie1.jpg" alt="movie-poster-breakingBad" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong>쇼생크 탈출</strong></h5>
+                    <p class="card-text fw-bold">두려움은 너를 죄수로 가두고 희망은 너를 자유롭게 하리라</p>
+                </div>
+            </article>
+        </div>
+        <div class="col">
+            <article class="card"><a href="dead.html"><img src="images/movie2.jpg" alt="movie-poster-kaafrionKiNamaaz" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong>죽은 시인의 사회</strong></h5>
+                    <p class="card-text fw-bold">미국 입시 명문고 웰튼 아카데미, 
+                      공부가 인생의 전부인 학생들이 
+                      아이비리그로 가기 위해 고군분투하는 곳.</p>
+                </div>
+            </article>
+        </div>
+        <div class="col">
+            <article class="card"><a href="dark.html"><img src="images/movie3.jpg" alt="movie-poster-insurgent" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong>다크나이트 라이즈</strong></h5>
+                    <p class="card-text fw-bold">'배트맨' vs '베인', 운명을 건 최후의 전투
+                      다크 나이트 신화의 전설이 끝난다</p>
+                </div>
+            </article>
+        </div>
+        <div class="col">
+            <article class="card"><a href="hotel.html"><img src="images/movie4.jpg" alt="movie-poster-fightClub" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong>그랜드 부다페스트 호텔</strong></h5>
+                    <p class="card-text fw-bold"><span class=text-danger>"잔혹한 세상에도 한줄기 희망은 있지"</span>
+                      세계 최고 부호 마담 D.의 피살사건!
+                      전 세계를 매료시킨 황홀한 이야기가 다시 시작된다!
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="col">
+            <article class="card"><a href="her.html"><img src="images/movie5.jpg" alt="movie-poster-leon" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong>her</strong></h5>
+                    <p class="card-text fw-bold"><span class="text-danger">"사랑에 빠지면 미치게 돼, 사회에서 허용하는 유일한 미친짓이거든"</span>
+                      사랑과 관계에 서툰 모두를 위한 감성 로맨스
+                      </p>
+                </div>
+            </article>
+        </div>
+        <div class="col">
+            <article class="card"><a href="showman.html"><img src="images/movie6.jpg" alt="movie-poster-joker" class="card-img-top"></a>
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong>위대한 쇼맨</strong></h5>
+                    <p class="card-text fw-bold"><span class="text-danger">2017년 크리스마스를 화려하게 장식할 단 하나의 뮤지컬 영화!</span>
+                     세상과 마주한 특별한 이들의 감동 스토리 탄생!</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</div><!-- container-->
+
+ 
+<footer>Web-Bootstrap PJT by 김상훈, 간정진</footer>    
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>    
+</body>
+</html>
