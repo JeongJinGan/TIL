@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" id="my-checkbox">
+    <form action="/articles/" id="my-form">
+        <input type="text">
+        <input type="submit" value="제출">
+    </form>
+    <br>
+    <a href="https://google.com/" target="_blank" id="my-link">GoToGoogle</a>
+
+    <script>
+        const checkBox = document.querySelector('#my-checkbox')
+        checkBox.addEventListener('click', function (event) {
+            event.preventDefault()
+            console.log(event)
+        })
+
+        const formTag = document.querySelector('#my-form')
+        formTag.addEventListener('submit',function(event) {
+            console.log(event)
+            event.preventDefault()
+            event.target.reset()
+        })
+
+        const aTag = document.querySelector('#my-link')
+        aTag.addEventListener('click', function(event) {
+            console.log(event)
+            event.preventDefault()
+        })
+        document.addEventListener('scroll', function(event) {
+            console.log(event)
+            event.preventDefault()
+        })
+
+    </script>
+</body>
+</html>

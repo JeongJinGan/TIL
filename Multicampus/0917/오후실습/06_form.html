@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="">
+    <label>비밀번호</label>
+    <input type="password" name="password" id="password" minlength="8"
+    required>
+    <label>비밀번호 확인</label>
+    <input type="password" name="password_confirmation" id="password_confirmation" minlength="8"
+    required>
+  </form>
+
+  <script>
+    const $pw = document.getElementById("password");     
+    const $pw1 = document.getElementById("password_confirmation");
+
+    $pw1.addEventListener("blur", password_confirmation);
+
+  function password_confirmation(){
+    if($pw.value!=$pw1.value){
+    alert("비밀번호가 다릅니다.");
+    }
+  }
+  </script>
+</body>
+</html>
