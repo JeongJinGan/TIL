@@ -54,4 +54,5 @@
 | 22/09/13  |                                                              | [팀프로젝트(with_김상훈)](./Multicampus/0913)                |
 | 22/09/14  |                                                              | [팀프로젝트(with_김상훈)](./Multicampus/0914/Team_project_with_ksy133900) |
 | 22/09/15  | [web09(자바스크립트)](./Multicampus/0915/JS01.md)<br>[JS문법](./Multicampus/0915/JS문법.md) | [오전실습](./Multicampus/0915/오전실습)                      |
+| 22/09/16  | [JS02](./Multicampus/0916/JS02.md)                           |                                                              |
 
