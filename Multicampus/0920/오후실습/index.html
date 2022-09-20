@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트</title>
+    <style>
+        .app{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .ball {
+            width: 10rem;
+            height: 10rem;
+            background-color: yellowgreen;
+            border-radius: 50%;
+
+            text-align: center;
+            line-height: 10rem;
+
+            font-size: xx-large;
+            font-weight: bold;
+
+            margin: 5px;
+        }
+        .ball-container{
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h1 style="text-align:center;">Lotto</h1>
+   
+        <button id="loto-btn">행운 번호 받기</button>
+
+        <section id="result"></section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+    <script>
+        const button = document.querySelector('#loto-btn')
+        button.addEventListener('click', function(){
+            
+            const ballContainer = document.createElement('div')
+            ballContainer.classList.add('ball-container')
+            
+            const numbers = _.sampleSize(_.range(1, 46), 6)
+            console.log(numbers)
+            
+            for (i=0; i<6; i++){
+                const ball = document.createElement('div')
+                ball.classList.add('ball')
+                ball.innerText = numbers[i]
+
+                if (ball.innerText<=10) {
+                    ball.style.backgroundColor = 'yellow'
+                } else if (ball.innerText <= 20) {
+                    ball.style.backgroundColor = 'blue'
+                } else if (ball.innerText <= 30) {
+                    ball.style.backgroundColor = 'red'
+                } else if (ball.innerText <= 40) {
+                    ball.style.color = 'white'
+                    ball.style.backgroundColor = 'black'
+                } else {
+                    ball.style.backgroundColor = 'green'
+                }
+                
+                ballContainer.appendChild(ball)
+                
+                const result = document.querySelector('#result')
+                result.appendChild(ballContainer)
+            }
+        })
+    </script>
+</body>
+</html>
