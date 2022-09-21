@@ -108,7 +108,26 @@ $ django-admin startproject firstpjt . 			// . => 현재폴더
 ```bash
 jj@DESKTOP-5N8TM5H MINGW64 ~/Desktop/hyper/server
 $ python manage.py runserver
-
-인터넷 브라우저 주소 => localhost:8000
 ```
 
+- 브라우저 주소창에 `localhost:8000` 입력
+- 아래와 같이 django 가 기본적으로 준비한 페이지가 뜬다면 서버 작동이 정상적으로 확인된 것
+
+![image-20220921224220639](../Markdown.assets/image-20220921224220639.png)
+
+
+
+## 가상환경 삭제
+
+1. 가상환경을 삭제하고 싶다면?
+
+   - 가상환경 만들어진 폴더를 삭제하거나
+
+   - Git Bash 창에
+
+     ```bash
+     rm -r [가상환경 이름]/
+     ex) `rm -r server-venv/`
+     ```
+
+     
