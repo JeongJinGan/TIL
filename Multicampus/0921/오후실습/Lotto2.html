@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로또 번호 추첨</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    body {
+      background-color: lightblue;
+      font-family: 'Do Hyeon', sans-serif;
+    }
+    .basic {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    .ball {
+      /* 크기 */
+      width: 5rem;
+      height: 5rem;
+      margin: .5rem;
+      /* 정렬 */
+      text-align: center;
+      line-height: 5rem;
+      /* 배경 */
+      border-radius: 50%;
+      border-style: solid;
+      border-width: thin;
+      border-color: lightgray;
+      box-shadow: 5px 5px 5px black;
+      /* 텍스트 */
+      color: black;
+      font-size: xx-large;
+      font-weight: bold;
+    }
+    .ball-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60rem;
+      height: 7rem;
+      margin: .5rem;
+      background-color: white;
+      border-radius: 60px;
+    }
+    .rank {
+      width: 7rem;
+      margin: .5rem 2rem;
+      text-align: center;
+      line-height: 3rem;
+      background-color: white;
+    }
+    .first-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 60rem;
+      height: 7rem;
+      margin: .5rem;
+      background-color: white;
+      border-style: solid;
+      border-width: thick;
+      border-color: #666666;
+      border-radius: 60px;
+    }
+    .plus {
+      margin: .5rem;
+      text-align: center;
+      line-height: 5rem;
+      background-color: white;
+    }
+    .btn-box {
+      display: flex;
+      justify-content: end;
+      width: 57rem;
+    }
+    button {
+      line-height: 3;
+      margin: 0 0.5rem 1rem;
+      background-color: white;
+      font-size: large;
+      font-weight: bold;
+      border-style: solid;
+      border-radius: 60px;
+      border-color: #666666;
+      font-family: 'Do Hyeon', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <div class="basic">
+    <h1>로또 번호 추첨</h1>
+    <div class="btn-box">
+      <button id="lotto-btn">번호 추첨</button>
+      <button id="reset-btn">리셋 하기</button>
+    </div>
+    <div class="first-container">
+      <h1 class="rank">당첨 번호</h1>
+      <div class="ball" style="background-color: #FFC65D; color: white; border-style: none;">3</div>
+      <div class="ball" style="background-color: #4CC3D9; color: white; border-style: none;">11</div>
+      <div class="ball" style="background-color: #4CC3D9; color: white; border-style: none;">15</div>
+      <div class="ball" style="background-color: #F16745; color: white; border-style: none;">29</div>
+      <div class="ball" style="background-color: #666666; color: white; border-style: none;">35</div>
+      <div class="ball" style="background-color: #7BC8A4; color: white; border-style: none;">44</div>
+      <h1 class="plus">+</h1>
+      <div class="ball" style="background-color: #FFC65D; color: white; border-style: none;">10</div>
+    </div>
+    <div id="result"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+  <script>
+    // 번호 추첨 버튼 클릭
+    const button = document.querySelector('#lotto-btn')
+    button.addEventListener('click', function() {
+      const five_lotto = document.createElement('div')
+      for (let i=0; i<5; i++) {
+        // 컨테이너 생성
+        const ballContainer = document.createElement('div')
+        ballContainer.classList.add('ball-container')
+        // 6개 번호 + 보너스 번호 추첨
+        const numbers = _.sampleSize(_.range(1, 46), 7)
+        console.log(numbers)
+        // 당첨 번호
+        const first = [3, 11, 15, 29, 35, 44]
+        // 등수 계산
+        const rank = document.createElement('h1')
+        rank.classList.add('rank')
+        let count = 0
+        let order = '낙첨'
+        for (const n of numbers) {
+          if (numbers.indexOf(n) != 6) {
+            if (first.includes(n)) {
+              count++
+            }
+          }
+        }
+        if (count == 6) {
+          order = '1등'
+        } else if (count == 5) {
+          if (numbers[6] == 10) {
+            order = '2등'
+          } else {
+            order = '3등'
+          }
+        } else if (count == 4) {
+          order = '4등'
+        } else if (count == 3) {
+          order = '5등'
+        }
+        rank.innerText = order
+        ballContainer.appendChild(rank)
+        // 6개 공 생성
+        for (const num of numbers) {
+          const ball = document.createElement('div')
+          ball.classList.add('ball')
+          ball.innerText = num
+          // 공 색 설정
+          if (numbers.indexOf(num) != 6) {
+            if (num == first[0]) {
+              ball.style.backgroundColor = '#FFC65D'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            } else if (num == first[1]) {
+              ball.style.backgroundColor = '#4CC3D9'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            } else if (num == first[2]) {
+              ball.style.backgroundColor = '#4CC3D9'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            } else if (num == first[3]) {
+              ball.style.backgroundColor = '#F16745'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            } else if (num == first[4]) {
+              ball.style.backgroundColor = '#666666'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            } else if (num == first[5]) {
+              ball.style.backgroundColor = '#7BC8A4'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            }
+          } else {
+            if (num == 10) {
+              ball.style.backgroundColor = '#FFC65D'
+              ball.style.color = 'white'
+              ball.style.borderStyle = 'none'
+            }
+          }
+          // 컨테이너에 붙임
+          ballContainer.appendChild(ball)
+          // 보너스 공 플러스 기호 추가
+          if (numbers.indexOf(num) === 5) {
+            const plus = document.createElement('h1')
+            plus.innerText = '+'
+            plus.classList.add('plus')
+            ballContainer.appendChild(plus)
+          }
+        }
+        // 컨테이너를 결과 영역에 붙임 
+        five_lotto.appendChild(ballContainer)
+      }
+      // 컨테이너를 결과 영역에 붙임 
+      const result = document.querySelector('#result')
+      result.appendChild(five_lotto)
+      // 리셋 하기 버튼 클릭
+      const button_2 = document.querySelector('#reset-btn')
+      button_2.addEventListener('click', function() {
+        result.removeChild(five_lotto)
+      })
+    })
+  </script>
+</body>
+</html>

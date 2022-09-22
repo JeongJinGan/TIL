@@ -57,6 +57,6 @@
 | 22/09/16  | [JS02](./Multicampus/0916/JS02.md)                           |                                                              |
 | 22/09/19  | [JS03](./Multicampus/0919/JS03.md)                           | [오전실습](./Multicampus/0919/오전실습)<br/>[오후실습](./Multicampus/0919/오후실습) |
 | 22/09/20  |                                                              | [오전실습](./Multicampus/0920/오전실습)<br/>[오후실습(Lotto)](./Multicampus/0920/오후실습) |
-| 22/09/21  | [Django01](./Multicampus/0921/Django01.md)                   | [오전실습](./Multicampus/0921/Django설치및실행.md)<br>[Q&A](./Multicampus/0921/Q&A.md) |
+| 22/09/21  | [Django01](./Multicampus/0921/Django01.md)                   | [오전실습](./Multicampus/0921/Django설치및실행.md)<br>[Q&A](./Multicampus/0921/Q&A.md)<br>[오후실습(Lotto)](./Multicampus/0921/오후실습) |
 | 22/09/22  | [Django02](./Multicampus/0922/Django02.md)                   | [오후실습](./Multicampus/0922/오후실습)                      |
 
