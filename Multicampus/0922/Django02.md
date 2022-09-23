@@ -7,7 +7,7 @@ python -m venv [가상환경이름]
 # 가상환경 실행
 # ls 명령어 입력 후 현재 경로에서 가상환경 폴더 확인
 # 윈도우
-. [가상환경이름]/Scripts/actiave
+source [가상환경이름]/Scripts/actiave
 
 # 맥
 . [가상환경이름]/bin/activate
