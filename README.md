@@ -60,4 +60,5 @@
 | 22/09/21  | [Django01](./Multicampus/0921/Django01.md)                   | [오전실습](./Multicampus/0921/Django설치및실행.md)<br>[Q&A](./Multicampus/0921/Q&A.md)<br>[오후실습(Lotto)](./Multicampus/0921/오후실습) |
 | 22/09/22  | [Django02](./Multicampus/0922/Django02.md)                   | [오후실습](./Multicampus/0922/오후실습)                      |
 | 22/09/23  |                                                              | [Django03(프로젝트_기획)](./Multicampus/0923/Django03.md)    |
+| 22/09/26  |                                                              | [오전&오후실습](./Multicampus/0926/오전&오후실습)<br/>[실습](./Multicampus/0926/실습) |
 
