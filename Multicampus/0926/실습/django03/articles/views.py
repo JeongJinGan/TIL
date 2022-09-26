@@ -67,11 +67,25 @@ def lipsum(request):
 
 def korean(request):
 
-    sen = request.GET.get("sen")
-    word = request.GET.get("word")
+    sen = int(request.GET.get("sen"))
+    words = int(request.GET.get("word"))
+
+    lorems = [[] for _ in range(sen)]
+    lorem_words = [
+        "바나나",
+        "짜장면",
+        "사과",
+        "바나나",
+        "딸기",
+    ]
+
+    for i in range(len(lorems)):
+        while len(lorems[i]) < words:
+            word = random.choice(lorem_words)
+            lorems[i].append(word)
+
     context = {
-        "sen": sen,
-        "word": word,
+        "lorems": lorems,
     }
 
     return render(request, "korean.html", context)
