@@ -41,12 +41,6 @@
             <button type="submit" class="btn btn-outline-primary">할 일 추가</button>
         </div>
         <table class="table">
-            <!-- DTL for문 사용법 -->
-            {% for todo in todos %}
-            <!-- <li>{{todo.id}} - {{todo.content}} - {{todo.completed}} -->
-            <!-- <a href="{% url 'todos:delete' todo.pk %}">삭제</a> -->
-
-
             <thead>
                 <tr>
                     <th scope="col">우선순위</th>
@@ -59,26 +53,31 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
+                {% for todo in todos %}
+                {% if todo.completed == False %}
                 <tr>
                     <th scope="row">{{todo.priority}}</th>
                     <td>{{todo.content}}</td>
-                    <td>{{todo.created_at}}</td>
-                    <td>{{todo.deadline}}</td>
-                    <td>{{todo.completed}}</td>
-                    <td><button type="button" class="btn btn-primary">변경</button></td>
+                    <td>{{ todo.created_at|date:"Y년 m월 d일" }}</td>
+                    <td>{{ todo.deadline|date:"Y년 m월 d일" }}</td>
+                    <td>{{ todo.completed }}</td>
+                    <td><a class="btn btn-primary" href="{% url 'todos:change' todo.pk %}" role="button">변경</a></td>
                     <td><a class="btn btn-danger" href="{% url 'todos:delete' todo.pk %}" role="button">삭제</a></td>
                 </tr>
-                <!-- <tr>
-                    <th scope="row">2</th>
-                    <td>저녁먹기</td>
-                    <td>2022년09월15일</td>
-                    <td>2022년12월25일</td>
-                    <td>False</td>
-                    <td><button type="button" class="btn btn-primary">변경</button></td>
+                {% endif %}
+                {% if todo.completed == True %}
+                <tr>
+                    <th scope="row">{{todo.priority}}</th>
+                    <td>{{todo.content}}</td>
+                    <td>{{ todo.created_at|date:"Y년 m월 d일" }}</td>
+                    <td>{{ todo.deadline|date:"Y년 m월 d일" }}</td>
+                    <td>{{ todo.completed }}</td>
+                    <td><a class="btn btn-primary" href="{% url 'todos:change' todo.pk %}" role="button">변경</a></td>
                     <td><a class="btn btn-danger" href="{% url 'todos:delete' todo.pk %}" role="button">삭제</a></td>
-                </tr> -->
+                </tr>
+                {% endif %}
+                {% endfor %}
             </tbody>
-            {% endfor %}
         </table>
     </form>
 

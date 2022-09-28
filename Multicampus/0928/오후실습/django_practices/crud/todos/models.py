@@ -14,5 +14,5 @@ class Todo(models.Model):
     """
     completed = models.BooleanField(default=False)
     priority = models.IntegerField(default=1)
-    created_at = models.DateField(auto_now=True)
-    deadline = models.DateField(auto_now=True)
+    created_at = models.DateField(auto_now_add=True)
+    deadline = models.DateField(null=True)

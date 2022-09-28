@@ -14,11 +14,25 @@ def index(request):
 
 def create(request):
     content = request.GET.get("content___")
-    Todo.objects.create(content=content)
     priority = request.GET.get("priority___")
-    Todo.objects.create(priority=priority)
     deadline = request.GET.get("deadline___")
-    Todo.objects.create(deadline=deadline)
+
+    Todo.objects.create(
+        content=content,
+        priority=priority,
+        deadline=deadline,
+    )
+    return redirect("todos:index")
+
+
+def change(request, todo_pk):
+    todo = Todo.objects.get(pk=todo_pk)
+    if todo.completed == False:
+        todo.completed = True
+    else:
+        todo.completed = False
+
+    todo.save()
     return redirect("todos:index")
 
 
