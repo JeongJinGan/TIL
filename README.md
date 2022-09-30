@@ -64,4 +64,5 @@
 | 22/09/27  | [Django04](./Multicampus/0927/Django04.md)                   | [실습](./Multicampus/0927/오후실습)                          |
 | 22/09/28  | [Django05](./Multicampus/0928/Django05.md)                   | [실습](./Multicampus/0928/오후실습)                          |
 | 22/09/29  | [프로젝트 순서](./Multicampus/0929/0929.md)                  | [실습](./Multicampus/0929/django_practices)                  |
+| 22/09/30  | [페어프로젝트1](https://github.com/JeongJinGan/Pair1)        |                                                              |
 
