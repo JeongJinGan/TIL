@@ -66,5 +66,5 @@
 | 22/09/29  | [프로젝트 순서](./Multicampus/0929/0929.md)                  | [실습](./Multicampus/0929/django_practices)                  |
 | 22/09/30  | [페어프로젝트1](https://github.com/JeongJinGan/Pair1)        |                                                              |
 | 22/10/04  | [Django07](./Multicampus/1004/Django07.md)<br>[실습정리]((./Multicampus/1004/README.md))<br>[실습전체흐름](./Multicampus/1004/전체흐름.md) | [오전&오후실습](./Multicampus/1004/오전&오후실습)            |
-| 22/10/05  |                                                              |                                                              |
+| 22/10/05  | [Django08](./Multicampus/1005/Django08.md)                   | [오전&오후실습](./Multicampus/1005/오전&오후실습)            |
 
