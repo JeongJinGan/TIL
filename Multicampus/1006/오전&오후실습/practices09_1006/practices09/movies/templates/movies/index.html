@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>게시판</h1>
+
+<a href="{% url 'movies:create' %}">글 쓰기</a>
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>번호</th>
+                <th>제목</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for movie in movies %}
+            <tr>
+                <td>{{ movie.pk }}</td>
+                <td><a href="{% url 'movies:detail' movie.pk %}">{{ movie.title }}</a></td>
+            </tr>
+            {% endfor %}
+            {% endblock %}
+        </tbody>
+    </table>
+</div>
