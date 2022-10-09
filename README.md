@@ -68,4 +68,5 @@
 | 22/10/04  | [Django07](./Multicampus/1004/Django07.md)<br>[실습정리]((./Multicampus/1004/README.md))<br>[실습전체흐름](./Multicampus/1004/전체흐름.md) | [오전&오후실습](./Multicampus/1004/오전&오후실습)            |
 | 22/10/05  | [Django08](./Multicampus/1005/Django08.md)                   | [오전&오후실습](./Multicampus/1005/오전&오후실습)            |
 | 22/10/06  | [정리&흐름](./Multicampus/1006/README.md)                    | [오전&오후실습](./Multicampus/1006/오전&오후실습)            |
+| 22/10/07  |                                                              | [페어프로젝트2](https://github.com/JeongJinGan/Pair2)        |
 
