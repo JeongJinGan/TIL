@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>게시판</h1>
+<img src="{% static 'images/apparel.jpeg' %}" alt="">
+<a href="{% url 'articles:create' %}">글 쓰기</a>
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>번호</th>
+                <th>제목</th>
+                <th>작성일시</th>
+                <th>수정일시</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>{{ article.id }}</td>
+                <td><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></td>
+                <td>{{ article.created_at }}</td>
+                <td>{{ article.updated_at }}</td>
+            </tr>
+
+            {% endfor %}
+            {% endblock %}
+        </tbody>
+    </table>
+</div>

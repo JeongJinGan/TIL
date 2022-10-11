@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+<h1>{{user.username}}님의 프로필</h1><br>
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>username</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="{% url 'accounts:update' user.pk %}" type="button" class="btn btn-primary">수정</a>
+    <a href="{% url 'accounts:delete' user.pk %}" type="button" class="btn btn-danger">삭제</a>
+
+    {% endblock %}
+</div>
