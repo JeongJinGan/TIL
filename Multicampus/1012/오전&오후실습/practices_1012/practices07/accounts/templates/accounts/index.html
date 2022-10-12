@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>pk</th>
+                <th>username</th>
+                <th>email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in accounts %}
+            <tr>
+                <td>{{ account.pk }}</td>
+                <td><a href="{% url 'accounts:detail' account.pk %}">{{ account.username }}</a></td>
+                <td>{{ account.email }}</td>
+            </tr>
+
+            {% endfor %}
+            {% endblock %}
+        </tbody>
+    </table>
+</div>
