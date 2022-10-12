@@ -64,6 +64,8 @@ python -m venv venv
 pip instrall -r requirements.txt
 ```
 
+
+
 ### 프로젝트 생성 및 앱 생성
 
 ```python
@@ -172,8 +174,6 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
   pass
 ```
-
-
 
 
 
