@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container my-5">
+    <h1 class='text-center my-4'>상세 페이지</h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">게시글 제목</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{ article.title}}" disabled
+            readonly>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">게시글 내용</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="{{ article.content }}" rows="3"
+            disabled readonly></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">이미지</label>
+    </div>
+    <div class="mb-3">
+        {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+        {% endif %}
+    </div>
+    <br>
+    <a class="btn btn-primary my-3 float-right" href="{% url 'articles:update' article.pk %}">수정하기</a>
+    <a class="btn btn-danger my-3 float-right" href="{% url 'articles:delete' article.pk %}">삭제하기</a>
+    <a class="btn btn-success my-3 float-right" href="{% url 'articles:index' %}">목록으로</a>
+    {% endblock %}

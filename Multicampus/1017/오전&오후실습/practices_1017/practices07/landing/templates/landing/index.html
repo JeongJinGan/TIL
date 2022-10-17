@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+{% if request.user.is_authenticated %}
+<div>
+    <p class="mt-5">로그아웃 하시겠습니까?</p>
+    <a class="btn btn-danger me-3" href="{% url 'accounts:logout' %}">로그아웃</a>
+    <p class="mt-5">돌아가기</p>
+    <a class="btn btn-primary me-3" href="{% url 'articles:index' %}">홈으로</a>
+</div>
+{% else %}
+<div class="d-grid gap-2">
+    <a href="{% url 'accounts:login' %}" type="button" class="btn btn-primary">로그인</a>
+    <a href="{% url 'accounts:signup' %}" type="button" class="btn btn-primary">회원가입</a>
+    <a href="{% url 'accounts:index' %}" type="button" class="btn btn-primary">회원목록</a>
+    <a href="{% url 'articles:index' %}" type="button" class="btn btn-primary">게시판</a>
+</div>
+{% endif %}
+{% endblock body %}

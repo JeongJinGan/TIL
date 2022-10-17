@@ -73,4 +73,5 @@
 | 22/10/12  | [Django10](./Multicampus/1012/Django10.md)                   | [오전&오후실습](./Multicampus/1012/오전&오후실습)            |
 | 22/10/13  | [Django11](./Multicampus/1013/Django11.md)                   | [오전&오후실습](./Multicampus/1013/오전&오후실습)            |
 | 22/10/14  | [페어프로그래밍흐름](./Multicampus/1014/README.md)           | [페어프로젝트2](https://github.com/JeongJinGan/Pair3)        |
+| 22/10/17  | [Django12](./Multicampus/1017/Django12.md)                   | [오전&오후실습](./Multicampus/1017/오전&오후실습)            |
 
