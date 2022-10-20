@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+
+{% block body %}
+
+{% if request.resolver_match.url_name == 'create' %}
+<h1>글쓰기</h1>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form article_form %}
+    {% bootstrap_button button_type="submit" content="글 작성" %}
+    <a class="btn btn-success my-3 float-right" href="{% url 'articles:index' %}">목록으로</a>
+</form>
+{% else %}
+<h1>게시글 수정하기 </h1>
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {% bootstrap_form article_form %}
+    {% bootstrap_button button_type="submit" content="수정완료" %}
+    <a class="btn btn-success my-3 float-right" href="{% url 'articles:index' %}">목록으로</a>
+</form>
+{% endif %}
+
+
+{% endblock %}

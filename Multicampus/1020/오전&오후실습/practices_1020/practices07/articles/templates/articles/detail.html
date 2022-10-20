@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+<div class="container my-5">
+    <h1 class='text-center my-4'>상세 페이지</h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">작성자</label>
+        <button type="button" class="btn btn-light"><a href="{% url 'accounts:detail' article.user.pk %}"
+                style="text-decoration: none; color: black;">
+                {{article.user.username }}</a></button>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">게시글 제목</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="{{ article.title}}" disabled
+            readonly>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">게시글 내용</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="{{ article.content }}" rows="3"
+            disabled readonly></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">이미지</label>
+    </div>
+    <div class="mb-3">
+        {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.image }}" width="400" height="300">
+        {% else %}
+        <p class="text-light bg-dark">이미지가 없습니다.</p>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">댓글</label>
+        {% if request.user.is_authenticated %}
+        <form action="{% url 'articles:comment_create' article.pk %}" method="POST">
+            {% csrf_token %}
+            {% bootstrap_form comment_form layout='inline'%}
+            {% bootstrap_button button_type="submit" content="작성" %}
+        </form>
+        {% endif %}
+    </div>
+    <div class="mb-3">
+        {% if comments %}
+        <p><b>{{ comments|length }}개의 댓글이 있습니다.</b></p>
+        {% endif %}
+    </div>
+
+    <div class="commentList">
+        <div class="ms-3">
+            {% for comment in comments %}
+            <div class="fw-bold">{{ comment.user.username }}</div>
+            {{ comment.content }}
+            {% if request.user == comment.user %}
+            <form action="{% url 'articles:comments_delete' article.pk comment.pk %}" method="POST">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-warning my-3 float-right">댓글삭제</button>
+                <hr>
+            </form>
+
+            {% else %}
+            <hr>
+            {% endif %}
+            {% empty %}
+            <p>작성된 댓글이 없습니다.</p>
+            {% endfor %}
+            <br>
+        </div>
+    </div>
+    <a class="btn btn-primary my-3 float-right" href="{% url 'articles:update' article.pk %}">수정하기</a>
+    <a class="btn btn-danger my-3 float-right" href="{% url 'articles:delete' article.pk %}">삭제하기</a>
+    <a class="btn btn-success my-3 float-right" href="{% url 'articles:index' %}">목록으로</a>
+    {% endblock %}

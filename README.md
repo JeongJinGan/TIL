@@ -76,5 +76,5 @@
 | 22/10/17  | [Django12](./Multicampus/1017/Django12.md)                   | [오전&오후실습](./Multicampus/1017/오전&오후실습)            |
 | 22/10/18  | [Django13(댓글)](./Multicampus/1018/Django13.md)             | [오전&오후실습](./Multicampus/1018/오전&오후실습)            |
 | 22/10/19  | [Django14](./Multicampus/1019/Django14.md)                   | [오전&오후실습](./Multicampus/1019/오전&오후실습)            |
-| 22/10/20  |                                                              | [오전&오후실습](./Multicampus/1020/오전&오후실습)            |
+| 22/10/20  | [Paginator추가](./Multicampus/1020/README.md)                | [오전&오후실습](./Multicampus/1020/오전&오후실습)            |
 
