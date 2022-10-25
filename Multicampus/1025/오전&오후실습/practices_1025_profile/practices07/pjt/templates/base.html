@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap" rel="stylesheet">
     <style>
@@ -44,14 +46,14 @@
     {% endblock css %}
 </head>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-white">
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
     {% if request.user.is_authenticated %}
     <div class="container-fluid">
         <!-- logo -->
 
         <div class="dropdown px-4 py-3" style="height:5rem; z-index:2;">
-            <a class="btn start-0 d-flex justify-content-center align-items-center dropdown-toggle" href="#"
-                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="btn btn-secondary start-0 d-flex justify-content-center align-items-center dropdown-toggle"
+                href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {% if request.user.profile_image %}
                 <div class="rounded-circle bg-white"
                     style="width:35px; height:35px; background-image:url({{ request.user.profile_image.url }}); background-repeat:no-repeat; background-position:center; background-size:contain;);">
@@ -61,13 +63,12 @@
                     style="width:35px; height:35px; background-image:url('https://dummyimage.com/35x35/000/fff');">
                 </div>
                 {% endif %}
-
                 <div class="ms-2 text-start">
-                    <p class="m-0 text-secondary" style="font-size:12px;">{{ request.user.username}}</p>
+                    <p class="m-0 text-white" style="font-size:12px;">{{ request.user.username}}</p>
                 </div>
             </a>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">프로필</a></li>
+                <li><a class="dropdown-item" href="{% url 'accounts:detail' user.pk %}">프로필</a></li>
                 <li>
                     <a class="dropdown-item" href="{% url 'accounts:logout' %}">로그아웃</a>
                 </li>
@@ -147,6 +148,9 @@
     {% bootstrap_javascript %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>
 </body>
 
