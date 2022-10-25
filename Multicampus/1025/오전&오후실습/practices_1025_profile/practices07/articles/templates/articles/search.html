@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load django_bootstrap5 %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock %}
+
+{% block body %}
+<h1>게시판</h1>
+
+{% if request.user.is_authenticated %}
+<a class="btn btn-primary my-3 float-right" href="{% url 'articles:create' %}">글 쓰기</a>
+<a class="btn btn-success my-3 float-right" href="{% url 'articles:index' %}">목록으로</a>
+{% endif %}
+<div class="row">
+    {% for article in articles %}
+    <div class="col-4 mb-3">
+        <div class="card rounded-5 shadow">
+            {% if article.thumbnail %}
+            <img src="{{ article.thumbnail.url }}" class="card-img-top " alt="...">
+            {% else %}
+            <img src="https://dummyimage.com/1200x960/000000/c4c4c4" class="card-img-top">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ article.title }}</h5>
+                {% if comments %}
+                <p><b>{{ comments|length }}개의 댓글이 있습니다.</b></p>
+                {% endif %}
+                <a href="{% url 'articles:detail' article.pk %}" class="btn btn-outline-primary my-3">글 불러오기</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
