@@ -79,4 +79,6 @@
 | 22/10/20  | [Paginator추가](./Multicampus/1020/README.md)                | [오전&오후실습](./Multicampus/1020/오전&오후실습)            |
 | 22/10/21  | [회원정보, 댓글수정(미완성)](./Multicampus/1021/README.md)   | [페어프로젝트4](https://github.com/JeongJinGan/Pair4)        |
 | 22/10/24  | [좋아요](./Multicampus/1024/README.md)                       | [오전&오후실습](./Multicampus/1024/오전&오후실습)            |
+| 22/10/25  |                                                              |                                                              |
+| 22/10/26  |                                                              |                                                              |
 
