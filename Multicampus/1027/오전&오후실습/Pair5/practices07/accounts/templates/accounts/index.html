@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>pk</th>
+                <th>username</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for account in accounts %}
+            <tr onClick='location.href="detail/{{account.pk}}/"' style='cursor: pointer;'>
+                <td>{{ account.pk }}</td>
+                <td>{{ account.username }}</a></td>
+                <td>{{ account.email }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

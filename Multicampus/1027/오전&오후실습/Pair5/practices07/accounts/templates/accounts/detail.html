@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load django_bootstrap5 %}
+{% block body %}
+<h1>{{ user }}님의 프로필</h1><br>
+
+<div class="d-flex justify-content-start">
+    <div class="me-5">
+        <p class="fs-6">게시물<span class="ms-2 fw-bold">{{ user.article_set.count }}</span></p>
+    </div>
+    <div class="me-5">
+        <p class="fs-6">팔로워<span class="ms-2 fw-bold">{{ user.followers.count }}</span></p>
+    </div>
+    <div class="me-5">
+        <p class="fs-6">팔로우<span class="ms-2 fw-bold">{{ user.followings.count }}</span></p>
+    </div>
+</div>
+
+{% if request.user != user %}
+<a href="{% url 'accounts:follow' user.pk %}">
+    {% if request.user in user.followers.all %}
+    <button type="button" class="btn btn-danger">팔로우 취소</button>
+    {% else %}
+    <button type="button" class="btn btn-primary">팔로우</button>
+    {% endif %}
+</a>
+{% endif %}
+
+<div class="container my-3">
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>username</th>
+                <th>email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ user.username }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% if request.user == user %}
+    <a href="{% url 'accounts:update' %}" type="button" class="btn btn-primary">수정</a>
+    <a href="{% url 'accounts:change_password' %}" class='btn btn-warning'>비밀번호 변경</a>
+    <a href="{% url 'accounts:delete' %}" type="button" class="btn btn-danger">삭제</a>
+    {% endif %}
+    <br><br>
+    <h3>작성한 글</h3>
+    <p class="text-muted">{{ user.article_set.count }}개를 작성하였습니다.</p>
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>작성글 개수</th>
+                <th>글 제목</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in user.article_set.all %}
+            <tr>
+                <td>{{ forloop.counter}}</td>
+                <td><a href="{% url 'articles:detail' article.pk %}">{{article.title}}</a></td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    <br><br>
+    <h3>작성한 댓글</h3>
+    <p class="text-muted">{{ user.comment_set.count }}개를 작성하였습니다.</p>
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>작성 댓글 개수</th>
+                <th>댓글 내용</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comment in user.comment_set.all %}
+            <tr>
+                <td>{{ forloop.counter}}</td>
+                <td><a href="{% url 'articles:detail' comment.article_id %}">{{comment.content}}</a></td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    <br><br>
+    <h3>좋아요 누른 글</h3>
+    <p class="text-muted">{{ user.like_articles.count }}개의 글의 좋아요를 표시하였습니다.</p>
+    <table class="table">
+        <thead>
+            <tr class="thead-dark">
+                <th>좋아요 글 개수</th>
+                <th>좋아요 표시한 글</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in user.like_articles.all %}
+            <tr>
+                <td>{{ forloop.counter}}</td>
+                <td><a href="{% url 'articles:detail' article.pk %}">{{ article.title }}</a></td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    {% endblock %}
+</div>

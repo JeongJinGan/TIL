@@ -81,4 +81,5 @@
 | 22/10/24  | [Django15](./Multicampus/1024/Django15.md)<br>[좋아요](./Multicampus/1024/README.md) | [오전&오후실습](./Multicampus/1024/오전&오후실습)            |
 | 22/10/25  | [Django16](./Multicampus/1025/Django16.md)                   | [오전&오후실습](./Multicampus/1025/오전&오후실습)            |
 | 22/10/26  |                                                              | [오전&오후실습](./Multicampus/1026/오전&오후실습)            |
+| 22/10/27  |                                                              | [오전&오후실습(27,28 페어 프로젝트)](./Multicampus/1027/오전&오후실습) |
 
