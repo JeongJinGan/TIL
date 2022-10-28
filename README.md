@@ -82,4 +82,5 @@
 | 22/10/25  | [Django16](./Multicampus/1025/Django16.md)                   | [오전&오후실습](./Multicampus/1025/오전&오후실습)            |
 | 22/10/26  | [Django17](./Multicampus/1026/Django17.md)<br/>[Follow, Like 비동기](./Multicampus/1026/README.md) | [오전&오후실습](./Multicampus/1026/오전&오후실습)            |
 | 22/10/27  |                                                              | [오전&오후실습(27,28 페어 프로젝트)](./Multicampus/1027/오전&오후실습) |
+| 22/10/28  | [Heroku 배포](./Multicampus/1028/README.md)                  | [페어프로젝트5](https://github.com/JeongJinGan/Pair5)        |
 
