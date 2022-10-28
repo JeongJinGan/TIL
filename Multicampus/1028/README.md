@@ -331,6 +331,8 @@ $ heroku buildpacks:set heroku/python
 # requirements.txt에 들어가서 밑에 두개 삭제
 Twisted==21.2.0
 twisted-iocpsupport==1.0.1
+
+# ⚠️ 폴더 경로들도 확인해보기!!
 ```
 
 
