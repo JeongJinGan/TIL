@@ -20,3 +20,18 @@
 - `B or F/앱이름/url명`
 - `B/Articles/index`
 
+
+
+
+
+화면 구성
+
+![index.html](../Markdown.assets/index.html.png)
+
+![search.html](../Markdown.assets/search.html.png)
+
+![detail.html](../Markdown.assets/detail.html.png)
+
+![create.html](../Markdown.assets/create.html.png)
+
+![user_detail.html](../Markdown.assets/user_detail.html.png)
