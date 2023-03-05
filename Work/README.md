@@ -120,19 +120,22 @@ curl localhost
 필수유틸 설치
 yum -y install ncurses-devel gcc gcc-c++ zlib curl libtermcap-devel lib-client-devel bzip2-devel cmake bison perl perl-devel
  root
-위에꺼 lib-client-devel 설치 안됨
+
+- 위에꺼 lib-client-devel 설치 안됨
+
 압축파일 다운 및 해제
-cd /usr/local/src
-wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.14.tar.gz
-tar xvf mysql-5.6.14.tar.gz
+  cd /usr/local/src
+  wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.14.tar.gz
+  tar xvf mysql-5.6.14.tar.gz
 
 > wget http://~~ -> wget: unable to resolve host address 'dev.mysql.com' 
 > 에러 났을시 
 > -> vi /etc/resolv.conf 
 > nameserver 8.8.8.8 ----->추가
 
-
 파일 이동 cd /usr/local/src/mysql-5.6.14
+
+
 
 #### Mysql 컴파일 설치
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/datag
@@ -149,8 +152,7 @@ gmake install
 
 
 
-
-Mysql 유저생성 및 그룹 계정권한주기
+#### Mysql 유저생성 및 그룹 계정권한주기
 groupadd mydba
 useradd mysql
 chown -R mysql:mydba /usr/local/mysql
@@ -163,17 +165,19 @@ chown -R mysql /usr/local/mysql/data
 * 옵션 -d : home디렉토리 지정 :home디렉토리를 생성후 지정하려면 -m으로 사용
 * 옵션 -g : 소속될 그룹을 지정한다.
 * 옵션 -s : 사용할 쉘을 지정한다.
-Mysql DB 생성
+
+#### Mysql DB 생성
 cd /usr/local/mysql
 ./scripts/mysql_install_db --user=mysql --datadir=/usr/local/mysql/data
 
 > /usr/bin/perl: bad interpreter: No such file or directory 에러
 > -> 해결 yum install perl 설치
 
-Mysql 설정파일 및 데몬 복사 및 수정
+
+
+#### Mysql 설정파일 및 데몬 복사 및 수정
 cp support-files/my-default.cnf /etc/my.cnf
 라는 명령어를 사용시 cp: overwrite '/etc/my.cnf'? 라는 문구 출력시 y입력
-
 
 vi /etc/my.cnf
 맨 아래부분에 추가해 준다.
@@ -186,7 +190,7 @@ innodb_flush_log_at_trx_commit = 1
 innodb_lock_wait_timeout = 50
 explicit_defaults_for_timestamp = TRUE
 
-Mysql Path 등록 (주요기능을   간편히 사용하기 위한)
+#### Mysql Path 등록 (주요기능을   간편히 사용하기 위한)
 ln -s /usr/local/mysql/bin/mysql /usr/bin/mysql
 ln -s /usr/local/mysql/bin/mysqldump /usr/sbin/mysqldump
 ln -s /usr/local/mysql/bin/mysql_config /usr/sbin/mysql_config
@@ -194,7 +198,8 @@ ln -s /usr/local/mysql/bin/mysqladmin /usr/sbin/mysqladmin
 ln -s /usr/local/mysql/support-files/mysql.server /etc/rc.d/init.d/mysql
 
 
-Mysql 구동 설정하기
+
+#### Mysql 구동 설정하기
 chkconfig --add mysql
 chkconfig --level 24 mysql off
 chmod -R 755 /usr/local/mysql/data
