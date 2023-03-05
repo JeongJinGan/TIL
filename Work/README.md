@@ -124,8 +124,11 @@ yum -y install ncurses-devel gcc gcc-c++ zlib curl libtermcap-devel lib-client-d
 - 위에꺼 lib-client-devel 설치 안됨
 
 압축파일 다운 및 해제
-  cd /usr/local/src
-  wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.14.tar.gz
+ cd /usr/local/src
+
+[다운받기전 아래 에러 참조(버전 변경 필요)] 
+
+ wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.14.tar.gz
   tar xvf mysql-5.6.14.tar.gz
 
 > wget http://~~ -> wget: unable to resolve host address 'dev.mysql.com' 
@@ -137,6 +140,22 @@ yum -y install ncurses-devel gcc gcc-c++ zlib curl libtermcap-devel lib-client-d
 
 
 
+```bash
+mysql-5.6.14 아래와 같은 에러로
+mysql-5.6.51 버전으로 다운
+
+
+gmake[2]: *** [storage/innobase/CMakeFIles/innobase_embedded.dir/build.make:1322: storage/innobase/CMakeFiles/innobase_embedded.dir/srv/srv0mon.cc.o] Error 1
+
+gmake[1] : *** [CMakeFiles/Makefile2:1800: storage/innobase/CMakeFiles/innobase_embedded.dir/all] Error 2
+```
+
+
+
+
+
+
+
 #### Mysql 컴파일 설치
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/datag
 
@@ -145,6 +164,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/d
 > 맨 뒤 datag, data 뭐가 맞는지 잘 모르겠다.. 가이드북에는 datag라고 적혀있기는 함.
 
 gmake
+
 gmake install
 
 > cmake -DCMAKE ~~ 에러
