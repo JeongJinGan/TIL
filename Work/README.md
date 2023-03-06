@@ -441,7 +441,59 @@ pggjj=>\q
 필수유틸 설치부터
 yum -y install libxml2-devel bzip2-devel libcurl-devel gdbm-devel libvpx libvpx-devel libjpeg-turbo-devel libpng-devel libXpm libXpm-devel freetype-devel t1lib t1lib-devel gmp-devel libc-client libc-client-devel pam-devel libicu libicu-devel openldap-devel readline-devel libedit-devel libtidy libtidy-devel libxslt libxslt-devel libpng-devel
 > libvpx-devel t1lib t1lib-devel libc-client libc-client-devel libtidy libtidy-devel 
-> 찾을 수 없다고 에러남.
+> 몇개 없다고 안되는데 그거 빼고 다시 설치.
+
+wget mirror.koreaidc.com/php/php-7.2.3.tar.gz 가이드에는 이렇게 적혀있지만 404 not found 뜸
+--> wget http://kr1.php.net/distributions/php-8.0.28.tar.gz 로 진행
+
+ tar xvf php-8.0.28.tar.gz
+ cd php-8.0.28
+
+```
+8.1.16버전으로 바꿔서 진행함(8.0.28로 해도 상관은 없을듯)
+wget http://kr1.php.net/distributions/php-8.1.16.tar.gz
+```
+
+PHP 소스 컴파일 instantclient 컴파일 설치
+
+./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache/bin/apxs 
+--with-pgsql=/usr/local/pgsql --with-mysql=/usr/local/mysql --with-config-file-path=/usr/local/apache --with-libxml-dir=/usr --enable-ftp --disable-debug --enable-sockets --enable-mod-charset --enable-sysvsem=yes --enable-sysvshm=yes --with-iconv --with-gmp --enable-magic-quotes --enable-gd-native-ttf --enable-inline-optimization --enable-bcmath --enable-exif --enable-sigchild --enable-mbstring --with-gd --with-bz2 --with-zlib --with-jpeg-dir=/usr/lib --with-pvng-dir=/usr/lib --with-freetype-dir=/usr/include/freetype2 --with-openssl --enable-zip --with-mysqli=/usr/local/mysql/bin/mysql_config --with-pdo-mysql=/usr/local/mysql
+
+[2020-04-01] 추가됨
+--with-mysqli=/usr/local/mysql/bin/mysql_config --with-pdo-mysql=/usr/local/mysql
+
+
+> php 소스 컴파일 작성 시
+1. perl is not installed
+2. apxs was not found try to pass the path using --with-apxs2=/path/to/apxs
+3. apache was not built using --enable-so(the apxs usage page is displayed)
+the output of /usr/local/apache/bin/apxs follows:
+./configure ~~~~ no such file or directory
+configure : error : aborting
+
+--> vi /usr/local/apache/bin/apxs
+#!/replace/with/path/to/perl/interpreter -w 지우고
+#!/usr/bin/perl -w 작성 
+
+작성 후 다시하면 
+configure: error: package requirements(sqlite3>3.7.4) were not met
+> yum -y install sqlite-devel 
+
+작성 후 다시하면
+configure: error: package requirements (oniguruma) were not met:
+package 'oniguruma', required by 'viturl:world', not found
+
+> yum install oniguruma, 그리고 yum install oniguruma-devel 설치
+yum install oniguruma-devel설치는
+dnf --enablerepo=powertools install oniguruma-devel
+
+작성 후 다시!
+
+make
+
+make test
+
+make install
 
 
 
