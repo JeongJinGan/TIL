@@ -107,14 +107,6 @@ cd /usr/local/src/httpd-2.4.55/
 
 ./configure --prefix=/usr/local/apache --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util --with-pcre=/usr/local/pcre --enable-mods-shared=all --enable-so --enable-rewrite --enable-auth-digest
 
-<<<<<<< HEAD
-=======
-> 위 과정에서 error: Did not find pcre-config script at ~~ 에러 났을 시
-
->--with-pcre=/usr/local/pcre/ 이 경로를
->--with-pcre=/usr/local/pcre/bin/pcre-config 로 변경
-
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 make
 
 make install
@@ -203,14 +195,9 @@ yum -y install ncurses-devel gcc gcc-c++ zlib curl libtermcap-devel lib-client-d
 
 압축파일 다운 및 해제
  cd /usr/local/src
-<<<<<<< HEAD
  
 [다운받기전 아래 에러 참조(버전 변경 필요)] 
 wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.51.tar.gz
-=======
-
-[다운받기전 아래 에러 참조(버전 변경 필요)/ ,mysql-5.6.14버전으로 진행] 
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 
 압축해제
 tar xvf mysql-5.6.51.tar.gz
@@ -240,20 +227,9 @@ gmake[1] : *** [CMakeFiles/Makefile2:1800: storage/innobase/CMakeFiles/innobase_
 
 
 
-
-
 #### Mysql 컴파일 설치
-<<<<<<< HEAD
 ```bash
 cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/data
-=======
-cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/datag
-
-> cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/data 
->
-> 맨 뒤 datag, data 뭐가 맞는지 잘 모르겠다.. 가이드북에는 datag라고 적혀있기는 함.
-> 일단, data로 진행.
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 
 gmake
 
@@ -268,14 +244,10 @@ gmake install
 #### Mysql 유저생성 및 그룹 계정권한주기
 ```bash
 groupadd mydba
-
 useradd mysql
-
 chown -R mysql:mydba /usr/local/mysql
-
 chown -R mysql /usr/local/mysql/data
 ```
-
 
 - groupadd : 새로은 그룹을 생성하는 명령어
 - useradd : 새로운 사용자를 생성하는 명령어
@@ -309,56 +281,39 @@ vi /etc/my.cnf
 맨 아래부분에 추가해 준다.
 
 innodb_buffer_pool_size = 16M
-
 innodb_additional_mem_pool_size = 2M
-
 innodb_log_file_size = 5M
-
 innodb_log_buffer_size = 8M
-
 innodb_flush_log_at_trx_commit = 1
-
 innodb_lock_wait_timeout = 50
-
 explicit_defaults_for_timestamp = TRUE
 ```
-
 
 
 
 #### Mysql Path 등록 (주요기능을   간편히 사용하기 위한)
 ```bash
 ln -s /usr/local/mysql/bin/mysql /usr/bin/mysql
-
 ln -s /usr/local/mysql/bin/mysqldump /usr/sbin/mysqldump
-
 ln -s /usr/local/mysql/bin/mysql_config /usr/sbin/mysql_config
-
 ln -s /usr/local/mysql/bin/mysqladmin /usr/sbin/mysqladmin
-
 ln -s /usr/local/mysql/support-files/mysql.server /etc/rc.d/init.d/mysql
 ```
-
 
 
 
 #### Mysql 구동 설정하기
 ```bash
 chkconfig --add mysql
-
 chkconfig --level 24 mysql off
-
 chmod -R 755 /usr/local/mysql/data
-
 
 chkconfig / 서비스 관리 명령어, 자동실행등록)
 chmod / 권한부여
 
 Mysql 실행 방법1
-
 service mysql start
 
-<<<<<<< HEAD
 Mysql 실행 방법2
 
 cd /usr/local/mysql/support-files/
@@ -366,7 +321,10 @@ cd /usr/local/mysql/support-files/
 ./mysql.server start
 ```
 
+
+
 # Mysql root 계정 비밀번호 변경
+
 ```bash
 cd /usr/local/mysql/bin
 ./mysqladmin -u root password root[2023-03-06]
@@ -378,40 +336,14 @@ mysql -u root -p해당명령어로 접근 하면 된다.
 - 패스워드 노출 경고 
 - using a password on the command line interface can be insecure. 
 - 경고창이 떠서 그냥 mysql -u root -p 로 넘어감.
-=======
-> 실행할 때 에러남
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
-
-Mysql 실행 방법2
-
-cd /usr/local/mysql/support-files/
-
-./mysql.server start
 
 
-<<<<<<< HEAD
+
 # Mysql데이터베이스 및 테이블 생성
 ```bash
 show databases;
 : 데이터베이스 테이블 확인
 
-=======
-Mysql root 계정 비밀번호 변경
-cd /usr/local/mysql/bin
-./mysqladmin -u root password root[2023-03-06]
-: 비밀번호 : root
-초기 비밀번호 설정 이후 아래와 같은 명령어로 접근하면 된다.
-mysql -u root -p해당명령어로 접근 하면 된다.
-- 패스워드 노출 경고 
-- using a password on the command line interface can be insecure. 
-- 경고창이 떠서 그냥 mysql -u root -p 로 넘어감.
-
-
-Mysql데이터베이스 및 테이블 생성
-show databases;
-: 데이터베이스 테이블 확인
- 
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 mysql> create database gjj;
 
 Query OK, 1 row affected (0.00 sec)
@@ -425,7 +357,6 @@ mysql> show databases;
 mysql> use gjj;
 
 Database changed
-<<<<<<< HEAD
 ```
 
 
@@ -433,11 +364,6 @@ Database changed
 # 테이블생성 및 확인
 
 ```bash
-=======
-
-테이블생성
-
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 mysql> create table test(no int,name varchar(20));
 
 Query OK, 0 rows affected (0.01 sec)
@@ -461,7 +387,6 @@ mysql> select * from test;
        	 no  	 name
          
        	 1    	 test
-<<<<<<< HEAD
 
  
 
@@ -469,15 +394,6 @@ Mysql나가기
 
 exit;
 
-=======
-         
- 
-Mysql나가기
-
-exit;
- 
- 
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 Mysql 시작 종료
 
 /usr/local/mysql/bin
@@ -485,17 +401,13 @@ Mysql 시작 종료
 service mysql start
 
 service mysql stop
-<<<<<<< HEAD
 ```
 
 
-=======
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 
 #### postgresql
 필수 유틸 설치
 
-<<<<<<< HEAD
 ```bash
 yum -ay install compat-readline43 readline-devel crypto-utils.* openssl* readline-devel pam-devel
 ```
@@ -504,31 +416,19 @@ yum -ay install compat-readline43 readline-devel crypto-utils.* openssl* readlin
 >
 > ay 오타같음. 
 >
-=======
-yum -ay install compat-readline43 readline-devel crypto-utils.* openssl* readline-devel pam-devel
-> yum -a install compat-readline43 readline-devel crypto-utils.* openssl* readline-devel pam-devel
-> 
-> ay 오타같음. 
-> 
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 > 이렇게 진행 시 unable to find a match compat-readline43 crypto-utils.* 에러 남.
 
 그냥 진행해보도록 함.
 
-<<<<<<< HEAD
 
 
 #### Pgsql 소스파일 다운로드 및 업데이트
 ```bash
-=======
-#### Pgsql 소스파일 다운로드 및 업데이트
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 cd /usr/local/src
 
 wget http://ftp.postgresql.org/pub/source/v9.3.2/postgresql-9.3.2.tar.gz
 
 tar zvf postgresql-9.3.2.tar.gz 
-<<<<<<< HEAD
 
 위에꺼 오류나면 
 tar -xzvf postgresql-9.3.2.tar.gz
@@ -545,22 +445,11 @@ cd postgresql-9.3.2
 
 #### Pgsql 소스 컴파일 및 설치
 ```bash
-=======
-> xvf를 잘못쓴거 같기는 한데 진행했더니 오류 나서 밑에걸로 진행
-
-위에꺼 오류나면 // tar -xzvf postgresql-9.3.2.tar.gz
-> -xzvf 명령어 뭔지 공부
-
-cd postgresql-9.3.2
-
-#### Pgsql 소스 컴파일 및 설치
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 ./configure --prefix=/usr/local/pgsql --without-readline
 
 gmake
 
 gmake install
-<<<<<<< HEAD
 ```
 
 
@@ -576,25 +465,13 @@ chown -R postgres:postgres /usr/local/pgsql
 
 #### DB 초기화 및 서l비스 등록
 ```bash
-=======
-
-#### 유저 추가권한 부여
-useradd postgres
-
-chown -R postgres:postgres /usr/local/pgsql
-
-#### DB 초기화 및 서l비스 등록
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 su - postgres
 -> [root@localhost ~]# 에서 [postgres@localhost ~]$ 으로 변경 됨.
 
 /usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
 
 /usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data
-<<<<<<< HEAD
 ```
-=======
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 
 ```
 LOG: database system is ready to accept connections
@@ -602,15 +479,11 @@ LOG: autovacuum launcher started
 라고 뜬다.
 ```
 
-<<<<<<< HEAD
 
 
 #### Postgre 데이터베이스 및 테이블 수정
 
 ```bash
-=======
-#### Postgre 데이터베이스 및 테이블 수정
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 cd /usr/local/pgsql/bin
 
 ./psql
@@ -624,10 +497,6 @@ CREATE ROLE
 select * from pg_shadow;
 
 3. 데이터베이스 생성
-<<<<<<< HEAD
-=======
-
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 create database pggjj;
 
 나가기
@@ -637,10 +506,7 @@ create database pggjj;
 4. 테이블생성
 
 ./psql -U root pggjj 
-<<<<<<< HEAD
 
-=======
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 - ( ./psql –U (유저명) (데이터베이스명))
 
 pggjj=> create table test(no integer, name varchar(20));
@@ -648,7 +514,6 @@ pggjj=> create table test(no integer, name varchar(20));
 pggjj=>insert into test(no,name) values (3,'postgrestest');
 
 pggjj=> select * from test;
-<<<<<<< HEAD
 	no   	name
     
    	3     	test
@@ -661,34 +526,19 @@ pggjj=>\q
 
 
 
-=======
-
-       	no   	name
-        
-       	3     	test
-        
-       	(1 row)
-        
-pggjj=>\q
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 
 
 #### 오라클 설치 x
 
-<<<<<<< HEAD
 
 
 #### PHP 설치
 
 ```bash
-=======
-#### PHP 설치
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 오라클 연동 건너뛰고
 
 필수유틸 설치부터
 yum -y install libxml2-devel bzip2-devel libcurl-devel gdbm-devel libvpx libvpx-devel libjpeg-turbo-devel libpng-devel libXpm libXpm-devel freetype-devel t1lib t1lib-devel gmp-devel libc-client libc-client-devel pam-devel libicu libicu-devel openldap-devel readline-devel libedit-devel libtidy libtidy-devel libxslt libxslt-devel libpng-devel
-<<<<<<< HEAD
 ```
 
 > libvpx-devel t1lib t1lib-devel libc-client libc-client-devel libtidy libtidy-devel 
@@ -697,27 +547,18 @@ yum -y install libxml2-devel bzip2-devel libcurl-devel gdbm-devel libvpx libvpx-
 
 
 ```bash
-=======
-> libvpx-devel t1lib t1lib-devel libc-client libc-client-devel libtidy libtidy-devel 
-> 몇개 없다고 안되는데 그거 빼고 다시 설치.
-
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 wget mirror.koreaidc.com/php/php-7.2.3.tar.gz 가이드에는 이렇게 적혀있지만 404 not found 뜸
 --> wget http://kr1.php.net/distributions/php-8.0.28.tar.gz 로 진행
 
  tar xvf php-8.0.28.tar.gz
  cd php-8.0.28
-<<<<<<< HEAD
 ```
-=======
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 
 ```
 8.1.16버전으로 바꿔서 진행함(8.0.28로 해도 상관은 없을듯)
 wget http://kr1.php.net/distributions/php-8.1.16.tar.gz
 ```
 
-<<<<<<< HEAD
 
 
 # PHP 소스 컴파일 instantclient 컴파일 설치
@@ -763,43 +604,6 @@ wget http://kr1.php.net/distributions/php-8.1.16.tar.gz
 
 
 ```bash
-=======
-PHP 소스 컴파일 instantclient 컴파일 설치
-
-./configure --prefix=/usr/local/php --with-apxs2=/usr/local/apache/bin/apxs 
---with-pgsql=/usr/local/pgsql --with-mysql=/usr/local/mysql --with-config-file-path=/usr/local/apache --with-libxml-dir=/usr --enable-ftp --disable-debug --enable-sockets --enable-mod-charset --enable-sysvsem=yes --enable-sysvshm=yes --with-iconv --with-gmp --enable-magic-quotes --enable-gd-native-ttf --enable-inline-optimization --enable-bcmath --enable-exif --enable-sigchild --enable-mbstring --with-gd --with-bz2 --with-zlib --with-jpeg-dir=/usr/lib --with-pvng-dir=/usr/lib --with-freetype-dir=/usr/include/freetype2 --with-openssl --enable-zip --with-mysqli=/usr/local/mysql/bin/mysql_config --with-pdo-mysql=/usr/local/mysql
-
-[2020-04-01] 추가됨
---with-mysqli=/usr/local/mysql/bin/mysql_config --with-pdo-mysql=/usr/local/mysql
-
-
-> php 소스 컴파일 작성 시
-1. perl is not installed
-2. apxs was not found try to pass the path using --with-apxs2=/path/to/apxs
-3. apache was not built using --enable-so(the apxs usage page is displayed)
-the output of /usr/local/apache/bin/apxs follows:
-./configure ~~~~ no such file or directory
-configure : error : aborting
-
---> vi /usr/local/apache/bin/apxs
-#!/replace/with/path/to/perl/interpreter -w 지우고
-#!/usr/bin/perl -w 작성 
-
-작성 후 다시하면 
-configure: error: package requirements(sqlite3>3.7.4) were not met
-> yum -y install sqlite-devel 
-
-작성 후 다시하면
-configure: error: package requirements (oniguruma) were not met:
-package 'oniguruma', required by 'viturl:world', not found
-
-> yum install oniguruma, 그리고 yum install oniguruma-devel 설치
-yum install oniguruma-devel설치는
-dnf --enablerepo=powertools install oniguruma-devel
-
-작성 후 다시!
-
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
 make
 
 make test
@@ -814,14 +618,5 @@ vi /etc/php.ini
 cp php.ini-production /usr/local/apache/php.ini
 
 vi /usr/local/apache/php.ini
-<<<<<<< HEAD
 ```
 
-=======
-
-
-
-
-
----이어서 작성 필요---
->>>>>>> 298fb120f3475dd61b39f3fa96242bef95e44e93
