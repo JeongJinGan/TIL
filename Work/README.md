@@ -433,6 +433,15 @@ pggjj=> select * from test;
 pggjj=>\q
 
 
+#### 오라클 설치 x
+
+#### PHP 설치
+오라클 연동 건너뛰고
+
+필수유틸 설치부터
+yum -y install libxml2-devel bzip2-devel libcurl-devel gdbm-devel libvpx libvpx-devel libjpeg-turbo-devel libpng-devel libXpm libXpm-devel freetype-devel t1lib t1lib-devel gmp-devel libc-client libc-client-devel pam-devel libicu libicu-devel openldap-devel readline-devel libedit-devel libtidy libtidy-devel libxslt libxslt-devel libpng-devel
+> libvpx-devel t1lib t1lib-devel libc-client libc-client-devel libtidy libtidy-devel 
+> 찾을 수 없다고 에러남.
 
 
 
