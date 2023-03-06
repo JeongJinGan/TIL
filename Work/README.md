@@ -495,6 +495,15 @@ make test
 
 make install
 
+PHP 설정변경
+cp php.ini-production /etc/php.ini
+
+vi /etc/php.ini
+
+cp php.ini-production /usr/local/apache/php.ini
+
+vi /usr/local/apache/php.ini
+
 
 
 
