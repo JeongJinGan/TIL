@@ -272,6 +272,76 @@ cd /usr/local/mysql/support-files/
 ./mysql.server start
 
 
+Mysql root 계정 비밀번호 변경
+cd /usr/local/mysql/bin
+./mysqladmin -u root password root[2023-03-06]
+: 비밀번호 : root
+초기 비밀번호 설정 이후 아래와 같은 명령어로 접근하면 된다.
+mysql -u root -p해당명령어로 접근 하면 된다.
+- 패스워드 노출 경고 
+- using a password on the command line interface can be insecure. 
+- 경고창이 떠서 그냥 mysql -u root -p 로 넘어감.
+
+
+Mysql데이터베이스 및 테이블 생성
+show databases;
+: 데이터베이스 테이블 확인
+ 
+mysql> create database gjj;
+
+Query OK, 1 row affected (0.00 sec)
+
+데이터베이스 확인
+
+mysql> show databases;
+
+데이터베이스 선택
+
+mysql> use gjj;
+
+Database changed
+
+테이블생성
+
+mysql> create table test(no int,name varchar(20));
+
+Query OK, 0 rows affected (0.01 sec)
+
+테이블확인
+
+mysql> show tables;
+
+1 row in set (0.00 sec)
+
+테이블에 데이터입력
+
+mysql> insert into test (no,name) values (1,'test');
+
+Query OK, 1 row affected (0.00 sec)
+
+테이블 데이터 확인
+
+mysql> select * from test;
+
+       	 no  	 name
+         
+       	 1    	 test
+         
+ 
+Mysql나가기
+
+exit;
+ 
+ 
+Mysql 시작 종료
+
+/usr/local/mysql/bin
+
+service mysql start
+
+service mysql stop
+
+
 
 
 ---이어서 작성 필요---
