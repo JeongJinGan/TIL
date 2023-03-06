@@ -392,6 +392,49 @@ LOG: autovacuum launcher started
 라고 뜬다.
 ```
 
+#### Postgre 데이터베이스 및 테이블 수정
+cd /usr/local/pgsql/bin
+
+./psql
+
+1. 사용자 추가
+postgres =# CREATE USER root WITH PASSWORD ‘root’;
+
+CREATE ROLE
+
+2. 사용자 조회
+select * from pg_shadow;
+
+3. 데이터베이스 생성
+
+create database pggjj;
+
+나가기
+
+\q
+
+4. 테이블생성
+
+./psql -U root pggjj 
+- ( ./psql –U (유저명) (데이터베이스명))
+
+pggjj=> create table test(no integer, name varchar(20));
+
+pggjj=>insert into test(no,name) values (3,'postgrestest');
+
+pggjj=> select * from test;
+
+       	no   	name
+        
+       	3     	test
+        
+       	(1 row)
+        
+pggjj=>\q
+
+
+
+
 
 
 
