@@ -341,6 +341,57 @@ service mysql start
 
 service mysql stop
 
+#### postgresql
+필수 유틸 설치
+
+yum -ay install compat-readline43 readline-devel crypto-utils.* openssl* readline-devel pam-devel
+> yum -a install compat-readline43 readline-devel crypto-utils.* openssl* readline-devel pam-devel
+> 
+> ay 오타같음. 
+> 
+> 이렇게 진행 시 unable to find a match compat-readline43 crypto-utils.* 에러 남.
+
+그냥 진행해보도록 함.
+
+#### Pgsql 소스파일 다운로드 및 업데이트
+cd /usr/local/src
+
+wget http://ftp.postgresql.org/pub/source/v9.3.2/postgresql-9.3.2.tar.gz
+
+tar zvf postgresql-9.3.2.tar.gz 
+> xvf를 잘못쓴거 같기는 한데 진행했더니 오류 나서 밑에걸로 진행
+
+위에꺼 오류나면 // tar -xzvf postgresql-9.3.2.tar.gz
+> -xzvf 명령어 뭔지 공부
+
+cd postgresql-9.3.2
+
+#### Pgsql 소스 컴파일 및 설치
+./configure --prefix=/usr/local/pgsql --without-readline
+
+gmake
+
+gmake install
+
+#### 유저 추가권한 부여
+useradd postgres
+
+chown -R postgres:postgres /usr/local/pgsql
+
+#### DB 초기화 및 서l비스 등록
+su - postgres
+-> [root@localhost ~]# 에서 [postgres@localhost ~]$ 으로 변경 됨.
+
+/usr/local/pgsql/bin/initdb -D /usr/local/pgsql/data
+
+/usr/local/pgsql/bin/pg_ctl start -D /usr/local/pgsql/data
+
+```
+LOG: database system is ready to accept connections
+LOG: autovacuum launcher started
+라고 뜬다.
+```
+
 
 
 
