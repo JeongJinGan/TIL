@@ -186,9 +186,13 @@ gmake install
 
 #### Mysql 유저생성 및 그룹 계정권한주기
 groupadd mydba
+
 useradd mysql
+
 chown -R mysql:mydba /usr/local/mysql
+
 chown -R mysql /usr/local/mysql/data
+
 
 - groupadd : 새로은 그룹을 생성하는 명령어
 - useradd : 새로운 사용자를 생성하는 명령어
@@ -200,6 +204,7 @@ chown -R mysql /usr/local/mysql/data
 
 #### Mysql DB 생성
 cd /usr/local/mysql
+
 ./scripts/mysql_install_db --user=mysql --datadir=/usr/local/mysql/data
 
 > /usr/bin/perl: bad interpreter: No such file or directory 에러
@@ -215,33 +220,57 @@ vi /etc/my.cnf
 맨 아래부분에 추가해 준다.
 
 innodb_buffer_pool_size = 16M
+
 innodb_additional_mem_pool_size = 2M
+
 innodb_log_file_size = 5M
+
 innodb_log_buffer_size = 8M
+
 innodb_flush_log_at_trx_commit = 1
+
 innodb_lock_wait_timeout = 50
+
 explicit_defaults_for_timestamp = TRUE
+
 
 #### Mysql Path 등록 (주요기능을   간편히 사용하기 위한)
 ln -s /usr/local/mysql/bin/mysql /usr/bin/mysql
+
 ln -s /usr/local/mysql/bin/mysqldump /usr/sbin/mysqldump
+
 ln -s /usr/local/mysql/bin/mysql_config /usr/sbin/mysql_config
+
 ln -s /usr/local/mysql/bin/mysqladmin /usr/sbin/mysqladmin
+
 ln -s /usr/local/mysql/support-files/mysql.server /etc/rc.d/init.d/mysql
+
 
 
 
 #### Mysql 구동 설정하기
 chkconfig --add mysql
+
 chkconfig --level 24 mysql off
+
 chmod -R 755 /usr/local/mysql/data
+
 
 chkconfig / 서비스 관리 명령어, 자동실행등록)
 chmod / 권한부여
 
 Mysql 실행 방법1
+
 service mysql start
+
 > 실행할 때 에러남
+
+Mysql 실행 방법2
+
+cd /usr/local/mysql/support-files/
+
+./mysql.server start
+
 
 
 
