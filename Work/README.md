@@ -47,21 +47,32 @@ make install
 cd /usr/local/src/apr-util-1.6.3/
 
 ./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr
+
 make
+
 make install
 
 # pcre 설치
 cd /usr/local/src/pcre-8.45/
 
 ./configure --prefix=/usr/local/pcre
+
 make
+
 make install
 
 # apache 설치 (httpd-2.4.55)
 cd /usr/local/src/httpd-2.4.55/
 
 ./configure --prefix=/usr/local/apache --with-apr=/usr/local/apr --with-apr-util=/usr/local/apr-util --with-pcre=/usr/local/pcre --enable-mods-shared=all --enable-so --enable-rewrite --enable-auth-digest
+
+> 위 과정에서 error: Did not find pcre-config script at ~~ 에러 났을 시
+
+>--with-pcre=/usr/local/pcre/ 이 경로를
+>--with-pcre=/usr/local/pcre/bin/pcre-config 로 변경
+
 make
+
 make install
 
 # 서버 url 설정해주기
@@ -126,7 +137,7 @@ yum -y install ncurses-devel gcc gcc-c++ zlib curl libtermcap-devel lib-client-d
 압축파일 다운 및 해제
  cd /usr/local/src
 
-[다운받기전 아래 에러 참조(버전 변경 필요)] 
+[다운받기전 아래 에러 참조(버전 변경 필요)/ ,mysql-5.6.14버전으로 진행] 
 
  wget http://dev.mysql.com/get/Downloads/MySQL-5.6/mysql-5.6.14.tar.gz
   tar xvf mysql-5.6.14.tar.gz
@@ -162,6 +173,7 @@ cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/d
 > cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/usr/local/mysql/data 
 >
 > 맨 뒤 datag, data 뭐가 맞는지 잘 모르겠다.. 가이드북에는 datag라고 적혀있기는 함.
+> 일단, data로 진행.
 
 gmake
 
